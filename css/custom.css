@@ -41,3 +41,42 @@ body {
 .btn-outline-primary:focus {
   box-shadow: 0;
 }
+
+.laatikot {
+  background-color: #c7ebf0;
+  color: white;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.laatikko1 {
+  background-color: #c7ebf0;
+  height: 300px;
+  padding: 10px;
+}
+
+.laatikko2 {
+  background-color: #c7ebf0;
+  height: 300px;
+  padding: 10px;
+}
+
+.teksti1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  height: 300px;
+  background-color: #5d7e83;
+}
+
+.teksti2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  height: 300px;
+  background-color: #5d7e83;
+}
