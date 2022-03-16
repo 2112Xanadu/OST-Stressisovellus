@@ -1,0 +1,43 @@
+:root {
+  --bs-primary: #c7ebf0;
+  --bs-secondary: #5d7e83;
+
+  --bs-body-font-family: "Nunito Sans", sans-serif;
+  /* "Raleway", sans-serif; */
+}
+
+body {
+  background-color: #c7ebf0;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  padding: 10px 25px;
+  text-align: center;
+  font-size: 16px;
+  margin: 5px 2px;
+  opacity: 1;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #a5c5c9;
+  border-color: #a5c5c9;
+  opacity: 0.8;
+}
+
+.btn-check:checked + .btn-primary:focus,
+.btn-check:active + .btn-primary:focus,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0;
+}
+
+.btn-check:focus + .btn-outline-primary,
+.btn-outline-primary:focus {
+  box-shadow: 0;
+}
