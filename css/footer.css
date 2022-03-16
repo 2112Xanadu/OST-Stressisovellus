@@ -1,0 +1,32 @@
+.footer-content{
+  padding: 15px 0;
+  background-color: lightblue;
+  position: fixed;
+  margin-top: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  
+
+  
+}
+.footer-content ul{
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+}
+.footer-conent ul a{
+
+}
+.footer-content ul li{
+    display: inline-block;
+    padding: 0 15px;
+
+}
+.copyright{
+    margin-top: 15px;
+    text-align: center;
+}
