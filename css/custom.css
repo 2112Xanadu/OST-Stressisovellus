@@ -6,8 +6,21 @@
   /* "Raleway", sans-serif; */
 }
 
-body {
+body,
+html {
   background-color: #c7ebf0;
+}
+
+.flexi {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .btn-primary {
@@ -40,4 +53,73 @@ body {
 .btn-check:focus + .btn-outline-primary,
 .btn-outline-primary:focus {
   box-shadow: 0;
+}
+
+.laatikot {
+  background-color: #c7ebf0;
+  color: white;
+  display: flex;
+}
+
+.laatikko1 {
+  background-color: #c7ebf0;
+  padding-top: 10px;
+}
+
+.laatikko2 {
+  background-color: #c7ebf0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.teksti1 {
+  font-size: 17px;
+  background-color: #5d7e83;
+  padding: 50px 12px;
+  font-family: var(--bs-body-font-family);
+  text-align: center;
+  height: 180px;
+  border-radius: 30px;
+}
+
+.teksti2 {
+  font-size: 17px;
+  background-color: #5d7e83;
+  padding: 50px 12px;
+  font-family: var(--bs-body-font-family);
+  text-align: center;
+  height: 180px;
+  border-radius: 30px;
+}
+
+.h2,
+h2 {
+  font-size: 20px;
+  color: #c7ebf0;
+  letter-spacing: 0.5px;
+}
+
+.h4,
+h4 {
+  font-size: 17px;
+  color: #c7ebf0;
+  letter-spacing: 0.5px;
+}
+
+.btn-light {
+  color: #000;
+  background-color: #c7ebf0;
+  border-radius: 9px;
+  border: none;
+}
+.btn-light:hover {
+  color: #000;
+  background-color: #a5c8ce;
+  border-radius: 9px;
+}
+
+@media screen and (max-width: 800px) {
+  .col-6 {
+    width: 100%;
+  }
 }
