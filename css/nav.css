@@ -11,7 +11,7 @@
   color: #5d7e83;
   font-size: 30px;
   letter-spacing: 1px;
-  margin: 1.5rem;
+  margin: 1rem;
   font-weight: 600;
 }
 
@@ -45,8 +45,8 @@
 
 .toggle-button {
   position: absolute;
-  top: 1.5rem;
-  right: 1rem;
+  top: 2rem;
+  right: 2rem;
   display: none;
   flex-direction: column;
   justify-content: space-between;
@@ -61,7 +61,7 @@
   border-radius: 10px;
 }
 
-@media screen and (max-width: 658px) {
+@media screen and (max-width: 858px) {
   .toggle-button {
     display: flex;
   }
@@ -71,22 +71,15 @@
     width: 100%;
   }
 
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   .navbar-links ul {
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
   }
 
-  .navbar-links li {
-    text-align: center;
-  }
-
-  .navbar-links li a {
-    padding: 0.5rem 1rem;
+  .navbar-links a {
+    padding: 0.5rem;
   }
 
   .navbar-links.active {
