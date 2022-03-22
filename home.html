@@ -24,58 +24,84 @@
 </head>
 
 <body>
-    <nav class="navbar">
-        <header class="logo">OST</header>
+    <div class="flexi">
 
-        <a href="#" class="toggle-button">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </a>
+        <nav class="navbar">
+            <header class="logo">OST</header>
 
-        <section class="navbar-links">
-            <ul>
-                <a class="active" href="home.html">Etusivu</a>
-                <a href="">Stressitasotesti</a>
-                <a href="">Oma HRV-data</a>
-            </ul>
-        </section>
-    </nav>
-    <!-- banner-area-->
+            <a href="#" class="toggle-button">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </a>
 
-    <!-- boxes-->
-    <div class="container border">
-        <div class="row">
-            <div class="col-lg-8 col-md-6">Col 1</div>
-            <div class="col-lg-4 col-md-6">Col 2</div>
+            <section class="navbar-links">
+                <ul>
+                    <a class="active" href="home.html">Etusivu</a>
+                    <a href="">Stressitasotesti</a>
+                    <a href="">Oma HRV-data</a>
+                </ul>
+            </section>
+        </nav>
+        <!-- banner-area-->
+        <div class="container-fluid" style="background-color: #5d7e83; height: 9rem">
+            <div class="row h-100">
+                <div class="col-6 align-self-end">
+                    <h2 id="" class="ms-3">
+                        Hei, käyttäjänimi!
+                    </h2>
+                    <h4 id="" class="text-start d-block d-sm-none ms-3">
+                        Päivämäärä
+                    </h4>
+                </div>
+                <div class="col-6 align-self-end d-none d-sm-block">
+                    <h4 id="" class="text-end">
+                        Tähän päivämäärä
+                    </h4>
+                </div>
+            </div>
         </div>
+
+        <main>
+            <!-- boxes-->
+            <div class="container overflow-hidden">
+                <div class="row laatikot gx-5 gy-4">
+                    <div class="laatikko1 col-6">
+                        <div class="teksti1 border">
+                            Et ole tänään tehnyt HRV-mittausta.<br>Tee Readiness-mittaus Kubios-sovelluksessa ja päivitä
+                            etusivu.
+                        </div>
+                    </div>
+                    <div class="laatikko2 col-6">
+                        <div class="teksti2 border">
+                            <p>Tänään et ole vielä tehnyt stressitasotestiä.</p>
+                            <button type="button" class="btn btn-light">Tästä testiin!</button>
+                        </div>
+                    </div>
+                </div>
+        </main>
+
+        <footer>
+            <section class="footer-content">
+                <ul>
+                    <li>
+                        <a href="">..</a>
+                    </li>
+                    <li>
+                        <a href="">..</a>
+                    </li>
+
+                    <li>
+                        <a href="">Tietosuojaseloste</a>
+                    </li>
+                </ul>
+                <p class="copyright">
+                    Copyright &copy; OST. 2022.
+                </p>
+            </section>
+        </footer>
     </div>
 </body>
-
-<main>
-
-</main>
-
-<footer>
-    <section class="footer-content">
-
-        <ul>
-            <li>
-                <a href="">..</a>
-            </li>
-            <li>
-                <a href="">..</a>
-            </li>
-
-            <li>
-                <a href="">Tietosuojaseloste</a>
-            </li>
-        </ul>
-        <p class="copyright">
-            Copyright &copy; OST. 2022.
-        </p>
-    </section>
-</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
