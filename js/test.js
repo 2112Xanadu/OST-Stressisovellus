@@ -13,7 +13,7 @@ let questions = [
     question: "Valitse itseäsi ja omaa tilannettasi parhaiten vastaava väite.",
     choice1: "Tunnen jaksavani hyvin.",
     choice2: "Tunnen itseni väsyneeksi.",
-    choice3: "Olen uupunut ja voimavarani ovat poissa",
+    choice3: "Olen uupunut ja voimavarani ovat poissa.",
     answer1: 1,
     answer2: 2,
     answer3: 3,
