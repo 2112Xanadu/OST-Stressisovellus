@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" type="text/css" href="css/nav.css" />
     <link rel="stylesheet" type="text/css" href="css/footer.css">
+    <link rel="stylesheet" href="css/stressisivu.css">
+    <link rel="stylesheet" href="css/stressitesti.css">
 </head>
 
 <body>
@@ -40,7 +42,7 @@
             <section class="navbar-links">
                 <ul>
                     <a class="active" href="home.html">Etusivu</a>
-                    <a href="stressisivu.html">Stressitasotesti</a>
+                    <a href="">Stressitasotesti</a>
                     <a href="">Oma HRV-data</a>
                     <a href="">Kirjaudu ulos</a>
                     <a href="">Profiili</a>
@@ -52,34 +54,41 @@
             <div class="row h-100">
                 <div class="col-6 align-self-end">
                     <h2 id="" class="ms-3">
-                        Hei, käyttäjänimi!
+                        Stressitasotesti
                     </h2>
                     <h4 id="pvm1" class="text-start d-block d-sm-none ms-3">
-                        Päivämäärä
                     </h4>
                 </div>
                 <div class="col-6 align-self-end d-none d-sm-block">
                     <h4 id="pvm2" class="text-end">
-                        Tähän päivämäärä
                     </h4>
                 </div>
             </div>
         </div>
 
         <main>
-            <!-- boxes-->
-            <div class="container overflow-hidden">
-                <div class="row laatikot gx-5 gy-4">
-                    <div class="laatikko1 col-6">
-                        <div class="teksti1 border">
-                            Et ole tänään tehnyt HRV-mittausta.<br>Tee Readiness-mittaus Kubios-sovelluksessa ja päivitä
-                            etusivu.
+            <!-- test-->
+            <div class="container" style="background-color: #5d7e83; border-radius: 30px;">
+                <div class="row d-flex align-items-center" style="height: 100%; padding: 20px;">
+                    <div class="container">
+                        <div id="game" class="justify-center flex-column">
+                          <div id="hud">
+                            <div id="hud-item">
+                              <h4 class="hud-main-text" id="questionCounter"></h4>
+                            </div>
+                          </div>
+                          <h4 id="question"></h4>
+                          <div class="choice-container">
+                            <p class="choice-text" data-number="1"></p>
+                          </div>
+                          <div class="choice-container">
+                            <p class="choice-text" data-number="2"></p>
+                          </div>
+                          <div id="three" class="choice-container">
+                            <p class="choice-text" data-number="3"></p>
+                          </div>
                         </div>
-                    </div>
-                    <div class="laatikko2 col-6">
-                        <div class="teksti2 border">
-                            <p>Tänään et ole vielä tehnyt stressitasotestiä.</p>
-                            <button type="button" class="btn btn-light" onclick="window.location.href='stressisivu.html'">Tästä testiin!</button>
+                      </div>
                         </div>
                     </div>
                 </div>
@@ -104,6 +113,7 @@
             </section>
         </footer>
     </div>
+    
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -114,5 +124,5 @@
     crossorigin="anonymous"></script>
 <script src="js/nav.js"></script>
 <script src="js/banner.js"></script>
-
+<script src="js/test.js"></script>
 </html>
