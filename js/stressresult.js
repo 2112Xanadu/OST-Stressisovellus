@@ -3,7 +3,7 @@
 const emoji = document.getElementById("emoji");
 const result = document.getElementById("result");
 const resultText = document.getElementById("resultText");
-const mostRecentScore = localStorage.getItem("mostRecentScore");
+const mostRecentScore = sessionStorage.getItem("mostRecentScore");
 
 result.innerText = `Pisteet: ${mostRecentScore}/10`;
 if (mostRecentScore <= 2) {

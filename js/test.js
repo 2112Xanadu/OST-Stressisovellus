@@ -88,6 +88,8 @@ getNewQuestion = () => {
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
 
+  console.log(question.innerText);
+
   choices.forEach((choice) => {
     const number = choice.dataset["number"];
     choice.innerText = currentQuestion["choice" + number];
@@ -102,7 +104,7 @@ getNewQuestion = () => {
   availableQuestions.splice(questionIndex, 1);
   acceptingAnswers = true;
 
-  localStorage.setItem("mostRecentScore", score);
+  sessionStorage.setItem("mostRecentScore", score);
 };
 choices.forEach((choice) => {
   choice.addEventListener("click", (e) => {
