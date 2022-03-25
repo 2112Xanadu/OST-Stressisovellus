@@ -21,3 +21,9 @@ label {
 #resultText {
   margin-bottom: 2rem;
 }
+
+#textArea {
+  width: 50%;
+}
+button {
+}
