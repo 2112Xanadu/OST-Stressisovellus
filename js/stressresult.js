@@ -1,0 +1,18 @@
+"use strict";
+
+const emoji = document.getElementById("emoji");
+const result = document.getElementById("result");
+const resultText = document.getElementById("resultText");
+const mostRecentScore = localStorage.getItem("mostRecentScore");
+
+result.innerText = `Pisteet: ${mostRecentScore}/10`;
+if (mostRecentScore <= 2) {
+  emoji.innerText = "😙";
+  resultText.innerText = `Jatka samaan malliin! Mikäli kuitenkin koet stressitasosi nousevan, käynnistä stressin syiden etsiminen ja poistaminen sekä turvaa riittävä lepo ja palautuminen. Muista, että tämä testi on vain viitteellinen ja suuntaa antava.`;
+} else if (mostRecentScore <= 4) {
+  emoji.innerText = "😔";
+  resultText.innerText = `Laita asiat tärkeysjärjestykseen, kaikkea et voi tehdä kerralla. Käynnistä stressin syiden etsiminen ja poistaminen sekä turvaa riittävä lepo ja palautuminen, sillä muutoin riskinä on se, että elimistö ei täysin palaudu normaalitilaan. Hyödynnä erilaisia rentoutumiskeinoja. Mikäli kuitenkin koet, että voimavarasi loppuvat hakeudu ammattiauttajan vastaanotolle. Muista, että tämä testi on vain viitteellinen ja suuntaa antava.`;
+} else if (mostRecentScore > 4) {
+  emoji.innerText = "🤯";
+  resultText.innerText = `Hakeudu ammattiauttajan vastaanotolle. Tilanne vaatii elämän kokonaisvaltaista uudelleen arviointia. Muista, että tämä testi on vain viitteellinen ja suuntaa antava.`;
+}

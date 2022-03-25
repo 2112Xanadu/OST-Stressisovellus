@@ -1,0 +1,23 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+label {
+  color: #fff;
+}
+
+#laatikkoinen {
+  width: 60%;
+}
+
+#emoji {
+  margin: 2rem 0 2rem 0;
+}
+
+#result {
+  margin-bottom: 2rem;
+}
+#resultText {
+  margin-bottom: 2rem;
+}
