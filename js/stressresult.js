@@ -3,6 +3,7 @@
 const emoji = document.getElementById("emoji");
 const result = document.getElementById("result");
 const resultText = document.getElementById("resultText");
+const laatikkoinen = document.getElementById("laatikkoinen");
 const mostRecentScore = sessionStorage.getItem("mostRecentScore");
 
 result.innerText = `Pisteet: ${mostRecentScore}/10`;
@@ -16,3 +17,5 @@ if (mostRecentScore <= 2) {
   emoji.innerText = "🤯";
   resultText.innerText = `Hakeudu ammattiauttajan vastaanotolle. Tilanne vaatii elämän kokonaisvaltaista uudelleen arviointia. Muista, että tämä testi on vain viitteellinen ja suuntaa antava.`;
 }
+
+laatikkoinen.scrollIntoView(true);

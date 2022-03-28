@@ -24,6 +24,9 @@ label {
 
 #textArea {
   width: 50%;
+  resize: none;
 }
-button {
+
+.btn.btn-light {
+  width: 200px;
 }
