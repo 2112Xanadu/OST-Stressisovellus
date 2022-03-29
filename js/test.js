@@ -7,6 +7,10 @@ let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
 let questionCounter = 0;
+const SCORE_ANSWER1 = 0;
+const SCORE_ANSWER2 = 1;
+const SCORE_ANSWER3 = 2;
+const MAX_QUESTIONS = 5;
 
 let availableQuestions = [];
 let questions = [
@@ -59,13 +63,6 @@ let questions = [
   },
 ];
 
-//Constants
-
-const SCORE_ANSWER1 = 0;
-const SCORE_ANSWER2 = 1;
-const SCORE_ANSWER3 = 2;
-const MAX_QUESTIONS = 5;
-
 //Functions
 
 startTest = () => {
@@ -89,12 +86,13 @@ getNewQuestion = () => {
   currentQuestion = availableQuestions[questionIndex];
   question.innerText = currentQuestion.question;
 
-  console.log(question.innerText);
-
+  //Display answer options
   choices.forEach((choice) => {
     const number = choice.dataset["number"];
     choice.innerText = currentQuestion["choice" + number];
   });
+
+  //Show only answer with proper value
   const vika = document.getElementById("three");
   if (!currentQuestion.hasOwnProperty("choice3")) {
     vika.style.display = "none";
@@ -105,8 +103,10 @@ getNewQuestion = () => {
   availableQuestions.splice(questionIndex, 1);
   acceptingAnswers = true;
 
+  //Save test score in session starage
   sessionStorage.setItem("mostRecentScore", score);
 };
+
 choices.forEach((choice) => {
   choice.addEventListener("click", (e) => {
     if (!acceptingAnswers) return;
@@ -128,10 +128,13 @@ choices.forEach((choice) => {
   });
 });
 
+//Increment score from each question
 incrementScore = (num) => {
   score += num;
 };
 
+//Start test...duh
 startTest();
 
+//Automatically scroll to view specific element
 testilaatikko.scrollIntoView(false);

@@ -9,8 +9,20 @@ label {
 
 #laatikkoinen {
   width: 60%;
+  background-color: #5d7e83;
 }
-
+#textArea {
+  width: 50%;
+  resize: none;
+}
+@media (max-width: 600px) {
+  #laatikkoinen {
+    width: 90%;
+  }
+  #textArea {
+    width: 90%;
+  }
+}
 #emoji {
   margin: 2rem 0 2rem 0;
 }
@@ -20,11 +32,6 @@ label {
 }
 #resultText {
   margin-bottom: 2rem;
-}
-
-#textArea {
-  width: 50%;
-  resize: none;
 }
 
 .btn.btn-light {

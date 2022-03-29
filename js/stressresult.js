@@ -6,6 +6,7 @@ const resultText = document.getElementById("resultText");
 const laatikkoinen = document.getElementById("laatikkoinen");
 const mostRecentScore = sessionStorage.getItem("mostRecentScore");
 
+//Display emoji, score and comment
 result.innerText = `Pisteet: ${mostRecentScore}/10`;
 if (mostRecentScore <= 2) {
   emoji.innerText = "😙";
@@ -18,4 +19,5 @@ if (mostRecentScore <= 2) {
   resultText.innerText = `Hakeudu ammattiauttajan vastaanotolle. Tilanne vaatii elämän kokonaisvaltaista uudelleen arviointia. Muista, että tämä testi on vain viitteellinen ja suuntaa antava.`;
 }
 
+//Automatically scroll to view specific element
 laatikkoinen.scrollIntoView(true);
