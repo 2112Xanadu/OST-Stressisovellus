@@ -4,6 +4,7 @@ const emoji = document.getElementById("emoji");
 const result = document.getElementById("result");
 const resultText = document.getElementById("resultText");
 const laatikkoinen = document.getElementById("laatikkoinen");
+const formi = document.getElementById("formi");
 const mostRecentScore = sessionStorage.getItem("mostRecentScore");
 
 //Display emoji, score and comment
@@ -21,3 +22,16 @@ if (mostRecentScore <= 2) {
 
 //Automatically scroll to view specific element
 laatikkoinen.scrollIntoView(true);
+
+const tallenna = document.getElementById("tallenna");
+const etusivulle = document.getElementById("etusivulle");
+etusivulle.style.display = "none";
+
+tallenna.onclick = () => {
+  resultText.style.display = "none";
+  result.innerText = "Kiitos vastauksesta!";
+  emoji.style.display = "none";
+  formi.style.display = "none";
+  tallenna.style.display = "none";
+  etusivulle.style.display = "block";
+};
