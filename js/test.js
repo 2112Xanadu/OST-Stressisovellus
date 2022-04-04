@@ -21,7 +21,7 @@ let questions = [
     choice2: "Ei.",
     answer1: 1,
     answer2: 2,
-    answer3: 4,
+    answer3: 3,
   },
   {
     question: "Valitse itseäsi ja omaa tilannettasi parhaiten vastaava väite.",
@@ -63,17 +63,39 @@ let questions = [
   },
 ];
 
-//Functions
-
 startTest = () => {
   questionCounter = 0;
-  score = 0;
   availableQuestions = [...questions];
   getNewQuestion();
 };
 
+//This section needs comments
+choices.forEach((choice) => {
+  choice.addEventListener("click", (e) => {
+    if (!acceptingAnswers) return;
+
+    acceptingAnswers = false;
+    const selectedChoice = e.target;
+    const selectedAnswer = selectedChoice.dataset["number"];
+
+    if (selectedAnswer == currentQuestion.answer1) {
+      incrementScore(SCORE_ANSWER1);
+    } else if (selectedAnswer == currentQuestion.answer2) {
+      incrementScore(SCORE_ANSWER2);
+    } else {
+      incrementScore(SCORE_ANSWER3);
+    }
+
+    console.log(score);
+    getNewQuestion();
+  });
+});
+
 getNewQuestion = () => {
-  if (availableQuestions.length === 0 || questionCounter >= MAX_QUESTIONS) {
+  if (availableQuestions.length === 0 || questionCounter == MAX_QUESTIONS) {
+    //Save test score in session starage
+    sessionStorage.setItem("mostRecentScore", score);
+
     ///Go to result page after last question
     return window.location.assign("/stressitulokset.html");
   }
@@ -102,38 +124,13 @@ getNewQuestion = () => {
 
   availableQuestions.splice(questionIndex, 1);
   acceptingAnswers = true;
-
-  //Save test score in session starage
-  sessionStorage.setItem("mostRecentScore", score);
 };
-
-choices.forEach((choice) => {
-  choice.addEventListener("click", (e) => {
-    if (!acceptingAnswers) return;
-
-    acceptingAnswers = false;
-    const selectedChoice = e.target;
-    const selectedAnswer = selectedChoice.dataset["number"];
-
-    if (selectedAnswer == currentQuestion.answer1) {
-      incrementScore(SCORE_ANSWER1);
-    } else if (selectedAnswer == currentQuestion.answer2) {
-      incrementScore(SCORE_ANSWER2);
-    } else {
-      incrementScore(SCORE_ANSWER3);
-    }
-    console.log(score);
-
-    getNewQuestion();
-  });
-});
 
 //Increment score from each question
 incrementScore = (num) => {
   score += num;
 };
 
-//Start test...duh
 startTest();
 
 //Automatically scroll to view specific element
