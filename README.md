@@ -4,7 +4,7 @@ INTRODUCTION
 
  This application is created for Metropolia University of Applied Sciences' Spring 2022 schoolproject. The purpose of this application is to collect users' HRV and 
  
- This project is maintained by the creators of the application (Joel Jaakkola, Johanna Huotari, Grete Veetla, Teemu Heiska). The application is made for students and healthcare professionals. In order for students to use the application the user must have a valid student code. The healthcare professionals that have the access to use this application must be working for THL or STM.  
+This project is maintained by the creators of the application (Joel Jaakkola, Johanna Huotari, Grete Veetla, Teemu Heiska). The application is made for students and healthcare professionals. In order for students to use the application the user must have a valid student code. The healthcare professionals that have the access to use this application must be working for THL or STM.  
  -
  
 FEATURES
