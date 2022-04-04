@@ -9,8 +9,14 @@ INTRODUCTION
  
 FEATURES
 
-- mitä kieliä, sovelluksia käytetty
-- oleelliset ominaisuudet
+OST includes the following main features:
+- Retrieving HRV data from Kubios Cloud database
+- Filling out a daily stress questionnaire and storing the results in a database
+- Viewing HRV and stress data both numerically and graphically
+- Database server for storing user data
+- Login system with role-based authentication
+
+The application was developed using HTML, CSS and JavaScript programming languages together with Bootstrap framework and Node.js runtime environment.
 
 DEVELOPERS
 
