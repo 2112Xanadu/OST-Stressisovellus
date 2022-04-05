@@ -1,0 +1,42 @@
+#testilaatikko {
+  width: 75%;
+}
+.choice-container {
+  display: flex;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+  border: 0.1rem solid rgb(86, 165, 235, 0.25);
+}
+
+.choice-container:hover {
+  cursor: pointer;
+  box-shadow: 0 0.1rem 1rem 0 #c7ebf0;
+  transform: translateY(-0.05rem);
+  transition: transform 100ms;
+}
+
+.choice-text {
+  padding: 1rem;
+  width: 100%;
+}
+
+#question {
+  margin: 1rem 0 2rem 0;
+}
+
+/* HUD */
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hud-prefix {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.hud-main-text {
+  text-align: center;
+}

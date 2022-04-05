@@ -1,0 +1,39 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+label {
+  color: #fff;
+}
+
+#laatikkoinen {
+  width: 60%;
+  background-color: #5d7e83;
+}
+#textArea {
+  width: 50%;
+  resize: none;
+}
+@media (max-width: 600px) {
+  #laatikkoinen {
+    width: 90%;
+  }
+  #textArea {
+    width: 90%;
+  }
+}
+#emoji {
+  margin: 2rem 0 2rem 0;
+}
+
+#result {
+  margin-bottom: 2rem;
+}
+#resultText {
+  margin-bottom: 2rem;
+}
+
+.btn.btn-light {
+  width: 200px;
+}

@@ -94,14 +94,17 @@ main {
 
 .h2,
 h2 {
-  font-size: 20px;
   color: #c7ebf0;
   letter-spacing: 0.5px;
 }
 
 .h4,
 h4 {
-  font-size: 17px;
+  color: #c7ebf0;
+  letter-spacing: 0.5px;
+}
+.h3,
+h3 {
   color: #c7ebf0;
   letter-spacing: 0.5px;
 }
