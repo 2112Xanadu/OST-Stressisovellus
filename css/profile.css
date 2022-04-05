@@ -1,0 +1,17 @@
+#left_col{
+    background-color: #5d7e83;
+}
+#right_col{
+    background-color: #c7ebf0;
+}
+.btn-color {
+    
+    background-color: #a8e1e9;
+    border-radius: 9px;
+    
+  }
+.btn-color:hover{
+    background-color: #83b8c0;
+    
+
+}
