@@ -20,7 +20,7 @@ The application was developed using HTML, CSS and JavaScript programming languag
 
 DEVELOPERS
 
-Grete Veetla (2112Xanadu)
-Teemu Heiska (Teemu19)
-Joel Jaakkola (Git-Joel)
-Johanna Huotari (huotarijohanna)
+- Grete Veetla (2112Xanadu)
+- Teemu Heiska (Teemu19)
+- Joel Jaakkola (Git-Joel)
+- Johanna Huotari (huotarijohanna)
