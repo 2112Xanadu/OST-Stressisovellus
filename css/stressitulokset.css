@@ -4,12 +4,14 @@ h3,
 h4,
 h5,
 label {
-  color: #fff;
+  color: #0a1045;
 }
-
+label {
+  margin-bottom: 0.5rem;
+}
 #laatikkoinen {
   width: 60%;
-  background-color: #5d7e83;
+  background-color: white;
 }
 #textArea {
   width: 50%;
@@ -36,4 +38,95 @@ label {
 
 .btn.btn-light {
   width: 200px;
+}
+
+#banner {
+  background-color: #c7ebf0;
+  height: 9rem;
+}
+:root {
+  --bs-primary: #c7ebf0;
+  --bs-secondary: #5d7e83;
+
+  --bs-body-font-family: "Nunito Sans", sans-serif;
+  /* "Raleway", sans-serif; */
+  --bs-body-secondary-font-family: "Raleway", sans-serif;
+}
+
+body,
+html {
+  background-color: rgb(218, 255, 253);
+}
+.flexi {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+.btn-primary {
+  color: #fff;
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  text-align: center;
+  font-size: 16px;
+  opacity: 1;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #a5c5c9;
+  border-color: #a5c5c9;
+  opacity: 0.8;
+}
+
+.btn-check:checked + .btn-primary:focus,
+.btn-check:active + .btn-primary:focus,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0;
+}
+
+.btn-check:focus + .btn-outline-primary,
+.btn-outline-primary:focus {
+  box-shadow: 0;
+}
+
+.h2,
+h2 {
+  color: #0a1045;
+  letter-spacing: 0.5px;
+}
+
+p {
+  color: #0a1045;
+  font-weight: 500;
+}
+.btn-light {
+  color: #0a1045;
+  background-color: #c7ebf0;
+  border-radius: 9px;
+  border: none;
+  margin: 0.5rem 0.9rem;
+  padding: 0.6rem 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.btn-light:hover {
+  color: #7cc7d3;
+  background-color: #a5c8ce;
+  border-radius: 9px;
+}
+
+@media screen and (max-width: 800px) {
+  col-md-4 {
+    width: 100%;
+  }
 }
