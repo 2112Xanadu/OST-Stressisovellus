@@ -11,17 +11,14 @@ const SCORE_ANSWER1 = 0;
 const SCORE_ANSWER2 = 1;
 const SCORE_ANSWER3 = 2;
 const MAX_QUESTIONS = 5;
-
-let availableQuestions = [];
 let questions = [
   {
     question:
       "Onko sinulla ilmennyt uusia sairauksia tai kärsitkö muistivaikeuksista tai itkukohtauksista?",
-    choice1: "Kyllä.",
-    choice2: "Ei.",
+    choice1: "Ei.",
+    choice2: "Kyllä.",
     answer1: 1,
     answer2: 2,
-    answer3: 3,
   },
   {
     question: "Valitse itseäsi ja omaa tilannettasi parhaiten vastaava väite.",
@@ -65,7 +62,6 @@ let questions = [
 
 startTest = () => {
   questionCounter = 0;
-  availableQuestions = [...questions];
   getNewQuestion();
 };
 
@@ -80,10 +76,14 @@ choices.forEach((choice) => {
 
     if (selectedAnswer == currentQuestion.answer1) {
       incrementScore(SCORE_ANSWER1);
-    } else if (selectedAnswer == currentQuestion.answer2) {
-      incrementScore(SCORE_ANSWER2);
-    } else {
+    } else if (
+      selectedAnswer == currentQuestion.answer3 ||
+      (selectedAnswer == currentQuestion.answer2 &&
+        questionCounter == MAX_QUESTIONS)
+    ) {
       incrementScore(SCORE_ANSWER3);
+    } else {
+      incrementScore(SCORE_ANSWER2);
     }
 
     console.log(score);
@@ -92,7 +92,7 @@ choices.forEach((choice) => {
 });
 
 getNewQuestion = () => {
-  if (availableQuestions.length === 0 || questionCounter == MAX_QUESTIONS) {
+  if (questions.length === 0 || questionCounter == MAX_QUESTIONS) {
     //Save test score in session starage
     sessionStorage.setItem("mostRecentScore", score);
 
@@ -104,8 +104,8 @@ getNewQuestion = () => {
   questionCounterText.innerText =
     "Kysymys " + questionCounter + "/" + MAX_QUESTIONS;
 
-  const questionIndex = availableQuestions.length - 1;
-  currentQuestion = availableQuestions[questionIndex];
+  const questionIndex = questions.length - 1;
+  currentQuestion = questions[questionIndex];
   question.innerText = currentQuestion.question;
 
   //Display answer options
@@ -122,7 +122,7 @@ getNewQuestion = () => {
     vika.style.display = "block";
   }
 
-  availableQuestions.splice(questionIndex, 1);
+  questions.splice(questionIndex, 1);
   acceptingAnswers = true;
 };
 
