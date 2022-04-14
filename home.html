@@ -39,18 +39,18 @@
 
             <section class="navbar-links">
                 <ul>
-                    <a class="active" href="home.html">Etusivu</a>
-                    <a href="stressisivu.html">Stressitasotesti</a>
-                    <a href="">Oma HRV-data</a>
-                    <a href="">Kirjaudu ulos</a>
-                    <a href="">Profiili</a>
+                    <li><a class="active" href="home.html">Etusivu</a></li>
+                    <li><a href="stressisivu.html">Stressitasotesti</a></li>
+                    <li><a href="hrv-tulokset.html">Oma HRV-data</a></li>
+                    <li><a href="signUp.html">Kirjaudu ulos</a></li>
+                    <li><a href="profile.html">Profiili</a></li>
                 </ul>
             </section>
         </nav>
         <!-- banner-area-->
-        <div class="container-fluid" style="background-color: #5d7e83; height: 9rem">
+        <div class="container-fluid" style="background-color: #C7EBF0; height: 9rem">
             <div class="row h-100">
-                <div class="col-6 align-self-end">
+                <div class="col-6 col-md-6 align-self-end">
                     <h2 id="" class="ms-3">
                         Hei, käyttäjänimi!
                     </h2>
@@ -69,31 +69,35 @@
         <main>
             <!-- boxes-->
             <div class="container overflow-hidden">
-                <div class="row laatikot gx-5 gy-4">
-                    <div class="laatikko1 col-6">
-                        <div class="teksti1 border">
-                            Et ole tänään tehnyt HRV-mittausta.<br>Tee Readiness-mittaus Kubios-sovelluksessa ja päivitä
-                            etusivu.
+                <div class="row laatikot gx-1 gy-4">
+                    <div class="laatikko1 col-md-4">
+                        <div class="teksti1 border shadow p-3 mb-5 bg-white">
+                            <p>Et ole tänään tehnyt HRV-mittausta.<br>Tee Readiness-mittaus Kubios-sovelluksessa ja
+                                päivitä
+                                etusivu.</p>
                         </div>
                     </div>
-                    <div class="laatikko2 col-6">
-                        <div class="teksti2 border">
+                    <div class="laatikko2 col-md-4">
+                        <div class="teksti2 border shadow p-3 mb-5 bg-white">
                             <p>Tänään et ole vielä tehnyt stressitasotestiä.</p>
-                            <button type="button" class="btn btn-light" onclick="window.location.href='stressisivu.html'">Tästä testiin!</button>
+                            <button type="button" class="btn btn-light"
+                                onclick="window.location.href='stressisivu.html'">Tästä testiin!</button>
                         </div>
                     </div>
                 </div>
+            </div>
         </main>
 
         <footer>
             <section class="footer-content">
                 <ul>
                     <li>
-                        <a href="">..</a>
+                        <a href="">Ota yhteyttä</a>
                     </li>
                     <li>
-                        <a href="">..</a>
+                        <a href="">Tietoa meistä</a>
                     </li>
+
                     <li>
                         <a href="">Tietosuojaseloste</a>
                     </li>

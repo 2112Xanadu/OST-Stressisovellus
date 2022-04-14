@@ -1,9 +1,8 @@
 .footer-content {
   padding: 20px;
-  background-color: lightblue;
+  background-color: #64b3d2;
   margin-top: auto;
   bottom: 0;
-  
 }
 
 .footer-content ul {
@@ -18,7 +17,7 @@
   text-decoration: none;
   font-size: 15px;
   letter-spacing: 1px;
-  color: #435a5e;
+  color: #4b6569;
 }
 
 .footer-content a:hover {
@@ -31,6 +30,7 @@
 }
 
 .copyright {
+  color: #4b6569;
   margin-top: 15px;
   text-align: center;
   font-size: 13px;

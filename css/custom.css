@@ -4,11 +4,12 @@
 
   --bs-body-font-family: "Nunito Sans", sans-serif;
   /* "Raleway", sans-serif; */
+  --bs-body-secondary-font-family: "Raleway", sans-serif;
 }
 
 body,
 html {
-  background-color: #c7ebf0;
+  background-color: rgb(218, 255, 253);
 }
 
 .flexi {
@@ -19,22 +20,21 @@ html {
 
 main {
   flex: 1;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
 }
 
 .btn-primary {
   color: #fff;
   background-color: var(--bs-primary);
   border-color: var(--bs-primary);
-  padding: 10px 25px;
   text-align: center;
   font-size: 16px;
-  margin: 5px 2px;
   opacity: 1;
   transition: 0.3s;
   border-radius: 5px;
 }
+
 .btn-primary:hover {
   color: #fff;
   background-color: #a5c5c9;
@@ -56,29 +56,18 @@ main {
 }
 
 .laatikot {
-  background-color: #c7ebf0;
   color: white;
   display: flex;
-}
-
-.laatikko1 {
-  background-color: #c7ebf0;
-  padding-top: 10px;
-}
-
-.laatikko2 {
-  background-color: #c7ebf0;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  justify-content: space-around;
 }
 
 .teksti1 {
   font-size: 17px;
-  background-color: #5d7e83;
+  background-color: #fff;
   padding: 50px 12px;
   font-family: var(--bs-body-font-family);
   text-align: center;
-  height: 180px;
+  height: 280px;
   border-radius: 30px;
 }
 
@@ -88,41 +77,53 @@ main {
   padding: 50px 12px;
   font-family: var(--bs-body-font-family);
   text-align: center;
-  height: 180px;
+  height: 280px;
   border-radius: 30px;
 }
 
 .h2,
 h2 {
-  color: #c7ebf0;
+  font-size: 20px;
+  color: #0a1045;
   letter-spacing: 0.5px;
 }
 
 .h4,
 h4 {
-  color: #c7ebf0;
-  letter-spacing: 0.5px;
-}
-.h3,
-h3 {
-  color: #c7ebf0;
+  color: #0a1045;
   letter-spacing: 0.5px;
 }
 
+p {
+  color: #0a1045;
+  letter-spacing: 0.5px;
+  margin-top: 4rem;
+  font-weight: 500;
+}
+
+.laatikko2 p {
+  margin-top: 5rem;
+}
+
 .btn-light {
-  color: #000;
+  color: #0a1045;
   background-color: #c7ebf0;
   border-radius: 9px;
   border: none;
+  margin: 0.5rem 0.9rem;
+  padding: 0.6rem 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
+
 .btn-light:hover {
-  color: #000;
+  color: #7cc7d3;
   background-color: #a5c8ce;
   border-radius: 9px;
 }
 
 @media screen and (max-width: 800px) {
-  .col-6 {
+  col-md-4 {
     width: 100%;
   }
 }
