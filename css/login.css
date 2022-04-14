@@ -99,14 +99,14 @@ li {
   color: #435a5e;
 }
 
+.form-group li a:hover {
+  color: #51929c;
+}
+
 input {
   margin-bottom: 1.5rem;
 }
 
-.suostumus {
-  padding: 1rem;
-}
-
-#suostumus {
-  margin-bottom: 0;
+.btn-secondary {
+  margin-bottom: 1rem;
 }
