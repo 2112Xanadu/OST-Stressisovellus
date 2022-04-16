@@ -1,7 +1,9 @@
 .tausta{
-    background-color: #5d7e83;
+    background-color: white;
     text-align: center;
     border-radius: 30px;
     font-family: var(--bs-body-font-family);
-    height: 200px;
+    height: 350px;
+    
+    
 }
