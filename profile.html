@@ -56,24 +56,31 @@
                 </ul>
             </section>
         </nav>
-        <!--Profiili sivun sisältö !-->
+        <!--Profiili sivun sisältö alkaa tästä. Sisältö on containerin sisällä !-->
         
         <div class="container">
+            
+            <!--Luodaan row, joka on profiilikortin runkona -->
+            
             <div class="row d-flex justify-content-center">
+                
+                <!--Listään row elementille kolumni-->
                 <div class="col-md-10 mt-5 pt-5">
-                    <!--   Lisätään varjostusta z-depth luokalla  !-->
+
+                    <!--   Row, jonka sisällä on kaksi kolumnia. Lisätään varjostusta z-depth luokalla  !-->
                     <div class="row z-depth-3">
                         
-                        
+                        <!--Ensimäinen kolumni (Profiilisivun vasen puoli)-->
                         <div id="left_col" class="d-flex col-sm-4 round-left align-items-center justify-content-center ">
                             <div class="card-block text-center text-white mb-1 mt-4">
                                 <h1 class="mt-4"><i class="bi-person-circle"></i></h1>
                                 <h2 class="font-weight-bold mt-4">Onni Onerva</h2>
                                 <p>Oppilas</p>
 
-                                <div class="row justify-content-center">
-                               
+                                <!--Tässä luodaan vaihda salasana nappi, joka on divin sisällä sen asettelemista varten-->
 
+                                <div class="row justify-content-center">
+                            
                                 <button id="vaihda_salasana" type="button" class="btn btn-color text-dark mb-4">Vaihda salasana</button>
                             </div>
                                 
@@ -81,11 +88,14 @@
                             </div>
 
                         </div>
+                        <!--Toinen kolumni (Profiilisivun oikea puoli)-->
                         <div id="right_col" class="col-sm-8 rounded-right">
                             <h3 class="mt-3 text-center ">Omat tiedot</h3>
                             
-                            
+                            <!--Ensimmäinen row, jossa etunimi ja sukunimi kentät. Nämä eroteltu eri kolumneiksi-->
                             <div class="row mt-3">
+                                <!--Etunimi kolumni-->
+
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="etunimi">Etunimi</label>
@@ -93,6 +103,8 @@
                                         
                                       </div>
                                 </div>
+
+                                <!--Sukunimi kolumni-->
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="sukunimi">Sukunimi</label>
@@ -101,8 +113,9 @@
                                       </div>
                                 </div>
                             </div>
-                            
+                            <!--Toinen row, jossa sähköposti ja puhelinnumero kentät. Nämä ovat myös eroteltu eri kolumneiksi-->
                             <div class="row mt-4 mb-4">
+                                <!--Sähköposti kolumnti-->
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="Email">Sähköposti</label>
@@ -110,6 +123,7 @@
                                 
                                       </div>
                                 </div>
+                                <!--Puhelin kolumni-->
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="puhelin">Puhelin</label>
@@ -118,6 +132,7 @@
                                       </div>
                                 </div>
                             </div>
+                            <!--Tallenna muutokset napin asettelemista varten luodaan se containerin sisälle-->
 
                             <div class="container">
 
@@ -139,15 +154,10 @@
 
                 </div>
             </div>
-
-
-            
+       
 
         </div>
      
-      
-
-        
 
         <footer>
 
