@@ -3,6 +3,7 @@
 const express = require('express');
 const session = require('express-session');
 const userRoute = require('./routes/userRoute');
+const userController = require('./controllers/userController');
 const authRoute = require('./routes/authRoute');
 const passport = require('./utils/pass');
 const app = express();
@@ -49,6 +50,10 @@ app.post('/login',
         console.log('success');
         res.redirect('home.html');
     });
+
+app.get('/home', function (req, res) {
+    res.render('index', { name: req.userController. });
+});
 
 app.use('/user', passport.authenticate('jwt', { session: false }), userRoute);
 app.use('/auth', authRoute);
