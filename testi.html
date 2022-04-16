@@ -39,11 +39,11 @@
 
             <section class="navbar-links">
                 <ul>
-                    <li><a  href="home.html">Etusivu</a></li>
+                    <li><a href="home.html">Etusivu</a></li>
                     <li><a class="active" href="stressisivu.html">Stressitasotesti</a></li>
-                    <li><a href="">Oma HRV-data</a></li>
-                    <li><a href="">Kirjaudu ulos</a></li>
-                    <li><a href="">Profiili</a></li>
+                    <li><a href="hrv-tulokset.html">Oma HRV-data</a></li>
+                    <li><a href="logout.html">Kirjaudu ulos</a></li>
+                    <li><a href="profile.html">Profiili</a></li>
                 </ul>
             </section>
         </nav>
@@ -66,53 +66,53 @@
 
         <main>
             <!-- test-->
-            <div id="testilaatikko"class="container shadow p-3 mb-5 bg-white">
+            <div id="testilaatikko" class="container shadow p-3 mb-5 bg-white">
                 <div class="row d-flex align-items-center" style="height: 100%; padding: 20px;">
                     <div class="container">
                         <div id="test" class="justify-center flex-column">
-                          <div id="hud">
-                            <div id="hud-item">
-                              <h4 class="hud-main-text" id="questionCounter"></h4>
+                            <div id="hud">
+                                <div id="hud-item">
+                                    <h4 class="hud-main-text" id="questionCounter"></h4>
+                                </div>
                             </div>
-                          </div>
-                          <h4 id="question" ></h4>
-                          <div class="choice-container">
-                            <p class="choice-text" data-number="1"></p>
-                          </div>
-                          <div class="choice-container">
-                            <p class="choice-text" data-number="2"></p>
-                          </div>
-                          <div id="three" class="choice-container">
-                            <p class="choice-text" data-number="3"></p>
-                          </div>
-                        </div>
-                      </div>
+                            <h4 id="question"></h4>
+                            <div class="choice-container">
+                                <p class="choice-text" data-number="1"></p>
+                            </div>
+                            <div class="choice-container">
+                                <p class="choice-text" data-number="2"></p>
+                            </div>
+                            <div id="three" class="choice-container">
+                                <p class="choice-text" data-number="3"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-        </main>
-
-        <footer>
-            <section class="footer-content">
-                <ul>
-                    <li>
-                        <a href="">Ota yhteyttä</a>
-                    </li>
-                    <li>
-                        <a href="">Tietoa meistä</a>
-                    </li>
-
-                    <li>
-                        <a href="">Tietosuojaseloste</a>
-                    </li>
-                </ul>
-                <p class="copyright">
-                    Copyright &copy; OST. 2022.
-                </p>
-            </section>
-        </footer>
+            </div>
     </div>
-    
+    </main>
+
+    <footer>
+        <section class="footer-content">
+            <ul>
+                <li>
+                    <a href="">Ota yhteyttä</a>
+                </li>
+                <li>
+                    <a href="">Tietoa meistä</a>
+                </li>
+
+                <li>
+                    <a href="">Tietosuojaseloste</a>
+                </li>
+            </ul>
+            <p class="copyright">
+                Copyright &copy; OST. 2022.
+            </p>
+        </section>
+    </footer>
+    </div>
+
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -124,4 +124,6 @@
 <script src="js/nav.js"></script>
 <script src="js/banner.js"></script>
 <script src="js/test.js"></script>
+<script src="js/logout.js"></script>
+
 </html>

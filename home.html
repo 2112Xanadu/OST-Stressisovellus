@@ -42,12 +42,12 @@
                     <li><a class="active" href="home.html">Etusivu</a></li>
                     <li><a href="stressisivu.html">Stressitasotesti</a></li>
                     <li><a href="hrv-tulokset.html">Oma HRV-data</a></li>
-                    <li><a href="signUp.html">Kirjaudu ulos</a></li>
+                    <li><a href="logout.html">Kirjaudu ulos</a></li>
                     <li><a href="profile.html">Profiili</a></li>
                 </ul>
             </section>
         </nav>
-        <!-- banner-area-->
+        <!-- Banner-area-->
         <div class="container-fluid" style="background-color: #C7EBF0; height: 9rem">
             <div class="row h-100">
                 <div class="col-6 col-md-6 align-self-end">
@@ -67,7 +67,7 @@
         </div>
 
         <main>
-            <!-- boxes-->
+            <!-- Boxes-->
             <div class="container overflow-hidden">
                 <div class="row laatikot gx-1 gy-4">
                     <div class="laatikko1 col-md-4">
@@ -75,6 +75,10 @@
                             <p>Et ole tänään tehnyt HRV-mittausta.<br>Tee Readiness-mittaus Kubios-sovelluksessa ja
                                 päivitä
                                 etusivu.</p>
+                            <!-- <h1>HRV-data</h1> -->
+                            <ul id="hrv data">
+                                <!-- js creates list here -->
+                            </ul>
                         </div>
                     </div>
                     <div class="laatikko2 col-md-4">
@@ -82,6 +86,10 @@
                             <p>Tänään et ole vielä tehnyt stressitasotestiä.</p>
                             <button type="button" class="btn btn-light"
                                 onclick="window.location.href='stressisivu.html'">Tästä testiin!</button>
+                            <!-- <h1>Stressitaso</h1> -->
+                            <ul id="stress survey results">
+                                <!-- js creates list here -->
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -118,5 +126,7 @@
     crossorigin="anonymous"></script>
 <script src="js/nav.js"></script>
 <script src="js/banner.js"></script>
+<script src="js/home.js"></script>
+<script src="js/logout.js"></script>
 
 </html>
