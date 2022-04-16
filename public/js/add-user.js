@@ -4,6 +4,8 @@ const url = 'http://localhost:3000'; // change url when uploading to server
 // select existing html elements
 const addUserForm = document.getElementById('add-user-form');
 
+// TODO adding user WIP
+
 // submit add user form
 addUserForm.addEventListener('submit', async (evt) => {
     evt.preventDefault();
