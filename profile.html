@@ -46,15 +46,15 @@
                 <div class="bar"></div>
             </a>
 
-            <section class="navbar-links">
+            <div class="navbar-links">
                 <ul>
-                    <a class="active" href="home.html">Etusivu</a>
-                    <a href="">Stressitasotesti</a>
-                    <a href="">Oma HRV-data</a>
-                    <a href="">Kirjaudu ulos</a>
-                    <a href="">Profiili</a>
+                    <li><a class="active" href="home.html">Etusivu</a></li>
+                    <li><a href="">Stressitasotesti</a></li>
+                    <li><a href="">Oma HRV-data</a></li>
+                    <li><a href="">Kirjaudu ulos</a></li>
+                    <li><a href="">Profiili</a></li>
                 </ul>
-            </section>
+            </div>
         </nav>
         <!--Profiili sivun sisältö alkaa tästä. Sisältö on containerin sisällä !-->
         
@@ -99,7 +99,7 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="etunimi">Etunimi</label>
-                                        <input type="text" class="form-control" id="nimi"  placeholder="Onni">
+                                        <input type="text" class="form-control" id="etunimi"  placeholder="Onni">
                                         
                                       </div>
                                 </div>
@@ -118,8 +118,8 @@
                                 <!--Sähköposti kolumnti-->
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="Email">Sähköposti</label>
-                                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="onni.onerva@metropolia.fi">
+                                        <label for="email">Sähköposti</label>
+                                        <input type="email" class="form-control" id="email" placeholder="onni.onerva@metropolia.fi">
                                 
                                       </div>
                                 </div>
@@ -161,7 +161,7 @@
 
         <footer>
 
-            <section class="footer-content mt-5">
+            <div class="footer-content mt-5">
                 <ul>
                     <li>
                         <a href="">Tietoa meistä</a>
@@ -176,11 +176,11 @@
                 <p class="copyright">
                     Copyright &copy; OST. 2022.
                 </p>
-            </section>
+            </div>
         
         </footer>
-    </div>
-</body>
+    
+
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -189,5 +189,7 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
 <script src="js/nav.js"></script>
+
+</body>
 
 </html>
