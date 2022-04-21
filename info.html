@@ -42,7 +42,7 @@
                 <div class="bar"></div>
             </a>
 
-            <section class="navbar-links">
+            <div class="navbar-links">
                 <ul>
                     <li><a href="home.html">Etusivu</a></li>
                     <li><a href="stressisivu.html">Stressitasotesti</a></li>
@@ -50,67 +50,95 @@
                     <li><a href="logout.html">Kirjaudu ulos</a></li>
                     <li><a href="profile.html">Profiili</a></li>
                 </ul>
-            </section>
+            </div>
         </nav>
+
+        <!--Tästä alkaa info sivun section-->
 
         <section class="info-body p-3">
 
-            <!-- Ensimmäinen row, mikä on containerin sisällä-->
+            <!-- Luodaan container, jonka sisälle sisältö tulee-->
             <div class="container">
+                <!--Ensimmäinen row, jonka sisällä kaksi samankokoista kolumnia-->
 
-                <div class="row text-center gx-5">
-
+                <div class="row gx-5">
+                    <!--Ensimmäinen kolumni-->
                     <div class="col-md pt-5">
-                        <div class="tausta p-3 ">
+                        
+                        <div class="tausta p-3 shadow">
+                            
                             <h3 class="fw-bold">Readiness indeksi:</h3>
-                            <p class="text-light">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, necessitatibus
-                                laboriosam asperiores nulla placeat aliquam autem nostrum ipsum reiciendis odit deserunt
-                                tempora ratione quasi! Perferendis tenetur esse laborum quis totam!
+                            <p class="text-dark">
+                                Readiness indeksi kuvaa prosentuaalisesti kehon palautumista ja stressitilaa. Mitä korkeampi prosentuaalinen arvo on, sitä paremmin keho on palautunit.
+                                Readiness arvot ovat luokiteltu seuraavasti:
+                                                  
                             </p>
+                            <!--Listan keskittämiseksi laitoin sen sisällön containerin sisään, mikä on flex-->
+                            <div class="container d-flex justify-content-center">
+                            <ul>
+                                <li>Todella alhainen = 0%-25%</li>
+                                <li>Alhainen = 25%-50% </li>
+                                <li>Normaali - 50%-75%</li>
+                                <li>Korkea - 75%-100%</li>
+                            </ul>
                         </div>
-
+                        
+                    </div>
+                    <!--Toinen kolumni alkaa tästä-->
                     </div>
                     <div class="col-md pt-5">
-                        <div class="tausta p-3 ">
-                            <h3 class="fw-bold">Readiness index:</h3>
-                            <p class="text-light">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error deserunt totam ut debitis
-                                veniam labore ducimus qui. Eos, cumque ad esse beatae, porro, dicta exercitationem
-                                quaerat non illo commodi corrupti.
+                        <div class="tausta p-3 shadow">
+                            <h3 class="fw-bold">RMSSD:</h3>
+                            <p class="text-dark">
+                                RMSSD (Root Mean Square of the Successive R-R Differences) on parasympaattisen hermoston toimintaa kuvaava arvo,
+                                 joka ilmoitetaan millisekunteinta. Korkeimmat millisekuntilukemat indikoivat korkeammasta parasympaattisen hermoston
+                                 aktiivisuudesta, suuresta sykevälivaihtelusta ja tätä kautta paremmasta palautumisesta. RMSSD arvot ovat tyypillisesti välillä 19-75ms.
+
+                                
+                        
                             </p>
                         </div>
                     </div>
                 </div>
-                <!-- Toinen row alkaa tästä-->
-                <div class="row text-center gx-5 pt-2">
+                <!-- Toinen row alkaa tästä. Sen sisällä myös kaksi samankokoista kolumnia-->
+            <div class="row text-center gx-5 pt-2">
+                <!--Ensimmäinen kolumni-->
 
                     <div class="col-md pt-5">
-                        <div class="tausta p-3 ">
-                            <h3 class="fw-bold">Readiness index:</h3>
-                            <p class="text-light">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse culpa, impedit tempora
-                                quos illum sed, ab blanditiis ipsam iste sunt hic expedita voluptatem pariatur, eaque
-                                quod enim? Minus, nostrum molestiae.
+                        <div class="tausta p-3 shadow">
+                            <h3 class="fw-bold">PNS indeksi:</h3>
+                            <p class="text-dark">
+                                PNS-indeksi (Parasympathetic Nervous System - index) on parasympaattista hermostoa
+                                kuvaava arvo. PNS-indeksin arvot ovat 95% aikuisista välillä -2 ja 2.
+                                Korkea PNS-indeksi on yleensä indikaatio hyvästä kokonaisvaltaisesta terveydestä,
+                                kunnosta ja readiness-arvosta. 
+                                
                             </p>
                         </div>
+                    <!--Toinen kolumni-->
                     </div>
                     <div class="col-md pt-5">
-                        <div class="tausta p-3 ">
-                            <h3 class="fw-bold">Readiness index:</h3>
-                            <p class="text-light">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam hic laudantium optio
-                                vitae eius, illo dolores voluptatum esse nobis nulla nemo quisquam distinctio molestiae
-                                corporis. Consectetur voluptas sed itaque nulla?
+                        <div class="tausta p-3 shadow">
+                            <h3 class="fw-bold">SNS indeksi:</h3>
+                            <p class="text-dark">
+                                
+                                SNS-indeksi (Sympathetic Nervous System - index) on sympaattista hermostoa kuvaava arvo. PNS-indeksin tavoin SNS-indeksin arvot ovat tyyppillisesti -2 ja 2 välillä.   
+                                Kuitenkin PNS-indeksistä poiketen korkea SNS-indeksi on yleenä seurausta
+                                korkalle stressille ja liialliselle sympaattisen hermoston aktiivisuudelle.  
                             </p>
                         </div>
                     </div>
+
                 </div>
             </div>
+
+
         </section>
+        
 
         <footer>
-            <section class="footer-content mt-5">
+
+            <div class="footer-content mt-5">
                 <ul>
                     <li><a href="">Tietoa meistä</a></li>
                     <li><a href="">Ota yhteyttä</a></li>
@@ -119,10 +147,11 @@
                 <p class="copyright">
                     Copyright &copy; OST. 2022.
                 </p>
-            </section>
+            </div>
+        
         </footer>
     </div>
-</body>
+
 
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
@@ -131,5 +160,7 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
 <script src="js/nav.js"></script>
+
+</body>
 
 </html>

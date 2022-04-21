@@ -1,5 +1,6 @@
 #left_col{
-    background-color: #5d7e83;
+    background-color:  #80c4df;
+    
 }
 #right_col{
     background-color: #c7ebf0;
@@ -14,4 +15,13 @@
     background-color: #83b8c0;
     
 
+}
+
+
+#tallenna_muutokset{
+    border-radius: 15px;
+}
+
+#vaihda_salasana{
+    border-radius: 15px;
 }
