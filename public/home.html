@@ -51,17 +51,17 @@
         <div class="container-fluid" style="background-color: #C7EBF0; height: 9rem">
             <div class="row h-100">
                 <div class="col-6 col-md-6 align-self-end">
-                    <h2 id="display_username" class="ms-3">
-                        Hei, käyttäjänimi!
+                    <h2 class="ms-3">
+                        Hei, <span id="display_name"></span>!
                     </h2>
-                    <h4 id="pvm1" class="text-start d-block d-sm-none ms-3">
+                    <h2 id="pvm1" class="text-start d-block d-sm-none ms-3">
                         Päivämäärä
-                    </h4>
+                    </h2>
                 </div>
                 <div class="col-6 align-self-end d-none d-sm-block">
-                    <h4 id="pvm2" class="text-end">
+                    <h2 id="pvm2" class="text-end">
                         Tähän päivämäärä
-                    </h4>
+                    </h2>
                 </div>
             </div>
         </div>
@@ -77,9 +77,18 @@
                             <p>Et ole tänään tehnyt HRV-mittausta.<br>Tee Readiness-mittaus Kubios-sovelluksessa ja
                                 päivitä etusivu.
                             </p>
-                            <!-- <h1>HRV-data</h1> -->
                             <ul id="hrv_data">
-                                <!-- js creates list here -->
+                                <!-- home.js creates list here 
+
+                                <h2>HRV-data</h2>
+
+                                Readiness: 7
+                                Mean_hr_bpm: 55
+                                PNS-index: 44
+                                RMSSD (ms): 992
+                                Stress_index: 0,594
+                                -->
+
                             </ul>
                         </div>
                     </div>
@@ -89,9 +98,16 @@
                             <button type="button" class="btn btn-light"
                                 onclick="window.location.href='stressisivu.html'">Tästä
                                 testiin!</button>
-                            <h1>Stressitaso</h1>
                             <ul id="stress_results">
-                                <!-- js creates list here -->
+                                <!-- js creates list here 
+                                                
+                                <h2>Stressitaso</h2>
+                                                
+                                Todays your stress level is 8.
+                                resultText 
+                                                
+                                <button>Show all results</button>
+                                -->
                             </ul>
                         </div>
                     </div>
@@ -102,16 +118,9 @@
         <footer>
             <section class="footer-content">
                 <ul>
-                    <li>
-                        <a href="">Ota yhteyttä</a>
-                    </li>
-                    <li>
-                        <a href="">Tietoa meistä</a>
-                    </li>
-
-                    <li>
-                        <a href="">Tietosuojaseloste</a>
-                    </li>
+                    <li><a href="">Ota yhteyttä</a></li>
+                    <li><a href="">Tietoa meistä</a></li>
+                    <li><a href="">Tietosuojaseloste</a></li>
                 </ul>
                 <p class="copyright">Copyright &copy; OST. 2022.</p>
             </section>

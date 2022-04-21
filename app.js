@@ -1,22 +1,20 @@
 'use strict';
 
+// Creating variables for node modules and port.
+
 const express = require('express');
 const session = require('express-session');
 const userRoute = require('./routes/userRoute');
-const userController = require('./controllers/userController');
 const authRoute = require('./routes/authRoute');
+
 const passport = require('./utils/pass');
 const app = express();
 const port = 3000;
-/* const bcrypt = require('bcryptjs');
-(async () => {
-    const crypt = await bcrypt.hash('onerva1234', 12);
-    console.log(crypt);
-})(); */
 
 // Static Files
 app.use(express.static('public'));
 
+// Express json for reading and saving json files.
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/
 app.use(session({
@@ -51,12 +49,17 @@ app.post('/login',
         res.redirect('home.html');
     });
 
-/* app.get('/home', function (req, res) {
-    res.render('index', { name: req.userController. });
-}); */
-
+// Route for user, auth, Kubios and stress survey.
 app.use('/user', passport.authenticate('jwt', { session: false }), userRoute);
 app.use('/auth', authRoute);
+/* app.use("/kubios", kubiosRoute);
+app.use("/survey", surveyRoute); */
 
+// Function for error if app.js doesn't work.
+app.use((err, req, res, next) => {
+    const status = err.status || 500;
+    res.status(status).send(err.message || 'internal error');
+});
 
+// Tells what port the server is listening
 app.listen(port, () => console.log(`Listening on port ${port}!`));
