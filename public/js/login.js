@@ -34,7 +34,7 @@ loginForm.addEventListener('submit', async (evt) => {
 });
 
 // submit register form
-addUserForm.addEventListener('submit', async (evt) => {
+/* addUserForm.addEventListener('submit', async (evt) => {
     evt.preventDefault();
     const data = serializeJson(addUserForm);
     const fetchOptions = {
@@ -48,4 +48,4 @@ addUserForm.addEventListener('submit', async (evt) => {
     const json = await response.json();
     alert(json.message);
 });
-
+ */
