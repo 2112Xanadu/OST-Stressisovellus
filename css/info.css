@@ -1,9 +1,45 @@
+@media (max-width: 1300px) { 
+    .tausta{
+        height: 300px;
+    }
+ }
+
+
+ @media (max-width: 990px) { 
+    .tausta{
+        height: 400px;
+    }
+ }
+
+ @media (max-width: 768px) { 
+    .tausta{
+        height: 300px;
+    }
+ }
+
+ @media (max-width: 490px) { 
+    .tausta{
+        height: 350px;
+    }
+ }
+
+ @media (max-width: 386px) { 
+    .tausta{
+        height: 450px;
+    }
+ }
+
+ 
+
 .tausta{
     background-color: white;
     text-align: center;
     border-radius: 30px;
     font-family: var(--bs-body-font-family);
-    height: 350px;
     
-    
+       
 }
+p {
+    margin-top: 1rem;
+}
+
