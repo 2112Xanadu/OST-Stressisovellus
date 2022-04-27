@@ -8,14 +8,14 @@ const { validationResult } = require("express-validator");
 const userModel = require("../models/userModel");
 
 const login = (req, res) => {
-    console.log("login", req.body);
+    console.log("line 11: login", req.body);
     // TODO: add passport authenticate
     passport.authenticate("local", { session: false }, (err, user, info) => {
         console.log('auth login error', err);
         console.log('auth login info', info);
         if (err || !user) {
             return res.status(400).json({
-                message: "Something is not right",
+                message: "Syöttämäsi salasana tai käyttäjätunnus on väärä",
                 user: user,
             });
         }
@@ -40,12 +40,16 @@ const user_post = async (req, res) => {
     }
 
     const params = [
-        req.body.name,
+        req.body.firstname,
+        req.body.lastname,
+        req.body.studentid,
+        req.body.dateOfBirth,
         req.body.email,
         await bcrypt.hash(req.body.password, 10),
     ];
     const userid = await userModel.insertUser(params);
-    res.send(`user inserted with ${userid}.`);
+    res.json({ message: `user inserted with ${userid}.` });
+    console.log('line 50: Registration was successful');
 };
 
 const logout = (req, res) => {

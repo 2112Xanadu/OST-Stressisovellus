@@ -6,6 +6,7 @@ const express = require('express');
 const session = require('express-session');
 const userRoute = require('./routes/userRoute');
 const authRoute = require('./routes/authRoute');
+const kubiosRoute = require('./routes/kubiosRoute');
 
 const passport = require('./utils/pass');
 const app = express();
@@ -52,8 +53,8 @@ app.post('/login',
 // Route for user, auth, Kubios and stress survey.
 app.use('/user', passport.authenticate('jwt', { session: false }), userRoute);
 app.use('/auth', authRoute);
-/* app.use("/kubios", kubiosRoute);
-app.use("/survey", surveyRoute); */
+app.use("/kubios", kubiosRoute);
+// app.use("/survey", surveyRoute); 
 
 // Function for error if app.js doesn't work.
 app.use((err, req, res, next) => {
