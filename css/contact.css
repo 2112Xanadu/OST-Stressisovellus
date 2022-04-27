@@ -31,10 +31,10 @@
     left: 50%;
     right: 50%;
     background-color: white;
-    padding: 50px 30px 30px;
+    padding: 50px 12px;
     font-family: var(--bs-body-font-family);
-    /*text-align: center;*/
-    height: 7800px;
+    text-align: center;
+    min-height: 450px;
     border-radius: 30px;
   }
   
@@ -100,8 +100,6 @@
   .boksi {
     --bs-gutter-x: 0;
     --bs-gutter-y: 0;
-  } 
-
-  h2 {
-    text-align: center;
   }
+
+  

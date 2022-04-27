@@ -33,8 +33,9 @@
     background-color: white;
     padding: 50px 30px 30px;
     font-family: var(--bs-body-font-family);
-    /*text-align: center;*/
-    height: 7800px;
+    text-align: center;
+    min-height: 1000px;
+    min-width: 200px;
     border-radius: 30px;
   }
   
@@ -97,11 +98,64 @@
     color: #435a5e;
   }
 
-  .boksi {
-    --bs-gutter-x: 0;
-    --bs-gutter-y: 0;
-  } 
+  .naamalaatikko img {
+    /*max-width: 230px;*/
+    max-height: 230px;
+       
+}
+ 
+.kuva {
+  float: left;
+  min-width: 50%;
+}
 
-  h2 {
-    text-align: center;
+.esittelyteksti {
+  min-width: 50%;
+  float: left;
+}
+
+@media screen and (max-width: 1000px) {
+  .kuva {
+    float: none;
+    min-width: 150px;
   }
+  .form-group {
+    min-height: 2800px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .kuva {
+    float: none;
+    width: 100%;
+  }
+  .form-group {
+    min-height: 2000px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .naamalaatikko {
+    width: 70%;
+    margin: auto;
+  }
+  .form-group {
+    font-size: 17px;
+    position: static;
+    min-height: 1800px;
+    min-width: 200px;
+  }
+  .naamalaatikko img {
+    width: 100%;
+    max-width: 230px;
+  }
+  h2 {
+    font-size: medium;
+  }
+}
+
+.boksi {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
