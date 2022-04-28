@@ -22,7 +22,8 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-  
+
+  /* vaalea laatikko */
   .form-group {
     font-size: 17px;
     position: relative;
@@ -37,7 +38,7 @@
     min-height: 450px;
     border-radius: 30px;
   }
-  
+  /* logon placeholder */
   .teksti2 {
     position: flex;
     top: 50%;
@@ -52,7 +53,7 @@
     height: 180px;
     border-radius: 30px;
   }
-  
+  /* vaalean laatikon otsikko */
   .h2,
   h2 {
     font-size: 30px;
@@ -78,7 +79,7 @@
     background-color: #a5c8ce;
     border-radius: 9px;
   }
-  
+  /* responsiivisuus pienemmällä näytöllä */
   @media screen and (max-width: 800px) {
     .col-8 {
       width: 50%;
@@ -96,7 +97,8 @@
     letter-spacing: 1px;
     color: #435a5e;
   }
-
+  
+ /* horisontaalisen scrollin poistaminen */
   .boksi {
     --bs-gutter-x: 0;
     --bs-gutter-y: 0;

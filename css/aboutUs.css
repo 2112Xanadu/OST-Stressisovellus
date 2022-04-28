@@ -22,7 +22,8 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-  
+
+  /* vaalea laatikko kuvien ja tekstin taustalla */
   .form-group {
     font-size: 17px;
     position: relative;
@@ -34,11 +35,12 @@
     padding: 50px 30px 30px;
     font-family: var(--bs-body-font-family);
     text-align: center;
-    min-height: 1000px;
+    min-height: 900px;
     min-width: 200px;
     border-radius: 30px;
   }
   
+  /* logon placeholder */
   .teksti2 {
     position: flex;
     top: 50%;
@@ -53,7 +55,7 @@
     height: 180px;
     border-radius: 30px;
   }
-  
+  /* vaalean laatikon otsikko */
   .h2,
   h2 {
     font-size: 30px;
@@ -98,22 +100,24 @@
     color: #435a5e;
   }
 
+  /* kuvien maksimikoko */
   .naamalaatikko img {
     /*max-width: 230px;*/
     max-height: 230px;
        
 }
- 
+ /* kuvien asettuminen vaaleaan laatikkoon */
 .kuva {
   float: left;
   min-width: 50%;
 }
-
+/* tiimin esittelytekstin asettuminen vaaleaan laatikkoon */
 .esittelyteksti {
   min-width: 50%;
   float: left;
 }
 
+/* responsiivisuus eri näyttökokojen välillä */
 @media screen and (max-width: 1000px) {
   .kuva {
     float: none;
@@ -154,6 +158,7 @@
   }
 }
 
+/* horisontaalisen scrollin poistaminen */
 .boksi {
   --bs-gutter-x: 0;
   --bs-gutter-y: 0;
