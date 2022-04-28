@@ -17,15 +17,17 @@ const ul2 = document.getElementById('stress_results');
 const printKubios = (measurements) => {
 
     console.log(measurements);
-    if (measurements.length > 0) {
-        const html = `<h2>HRV-data</h2>
 
-                  Readiness: ${measurements.result.readiness}
-                  Mean_hr_bpm: 55
-                  PNS-index: 44
-                  RMSSD (ms): 992
-                  Stress_index: 0,594`;
-        document.getElementById('hrv-data').innerHTML = html;
+    if (measurements.length > 0) {
+        const i = measurements.length - 1;
+        const html = `<h2>Sykevälivaihteludata</h2>
+                <p style="text-align: center; margin-top: 2rem; ">
+                Readiness: ${Math.round((measurements[i].result.readiness) * 100) / 100}<br>
+                Mean_hr_bpm: ${Math.round((measurements[i].result.mean_hr_bpm) * 100) / 100}<br>
+                PNS-index: ${Math.round((measurements[i].result.pns_index) * 100) / 100}<br>
+        RMSSD(ms): ${Math.round((measurements[i].result.rmssd_ms) * 100) / 100}<br>
+                Stress_index: ${Math.round((measurements[i].result.stress_index) * 100) / 100}</p>`;
+        ul1.innerHTML = html;
     }
 }
 

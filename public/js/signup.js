@@ -2,14 +2,13 @@
 const url = 'http://localhost:3000'; // change url when uploading to server
 
 // select existing html elements
-const addUserForm = document.getElementById('add-user-form');
-
-// TODO adding user WIP
+const signUpForm = document.getElementById('register-form');
 
 // submit add user form
-addUserForm.addEventListener('submit', async (evt) => {
+signUpForm.addEventListener('submit', async (evt) => {
     evt.preventDefault();
-    const data = serializeJson(addUserForm);
+    const data = serializeJson(signUpForm);
+    console.log('rivi 10: ', data);
     const fetchOptions = {
         method: 'POST',
         headers: {
@@ -18,8 +17,9 @@ addUserForm.addEventListener('submit', async (evt) => {
         body: JSON.stringify(data), // body data type must match "Content-Type" header
     };
 
-    const response = await fetch(url + '/user', fetchOptions);
+    const response = await fetch(url + '/auth/register', fetchOptions); // /user
     const json = await response.json();
     alert(json.message);
-    location.href = 'home.html';
+    console.log('signUp.js line 22');
+    location.href = 'index.html';
 });
