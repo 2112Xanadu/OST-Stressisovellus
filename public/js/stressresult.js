@@ -7,6 +7,9 @@ const laatikkoinen = document.getElementById("laatikkoinen");
 const formi = document.getElementById("formi");
 const mostRecentScore = sessionStorage.getItem("mostRecentScore");
 const testiTehty = sessionStorage.getItem("testiTehty");
+const user = sessionStorage.getItem("user");
+const userid = JSON.parse(user).userid;
+console.log(userid);
 
 //Display emoji, score and comment
 result.innerText = `Pisteet: ${mostRecentScore}/10`;
@@ -23,20 +26,33 @@ if (mostRecentScore <= 2) {
 const tallenna = document.getElementById("tallenna");
 const etusivulle = document.getElementById("etusivulle");
 
+//console.log(kommentti);
 etusivulle.style.display = "none";
 
 //Automatically scroll to view specific element
 laatikkoinen.scrollIntoView(true);
 
-//Change elements when results are saved
+//Save results to database
 tallenna.onclick = () => {
-  resultText.style.display = "none";
-  result.innerText = "Kiitos vastauksesta!";
-  emoji.style.display = "none";
-  formi.style.display = "none";
-  tallenna.style.display = "none";
-  etusivulle.style.display = "block";
-  sessionStorage.setItem("testiTehty", testiTehty);
+  const res = mostRecentScore;
+  const kommentti = document.getElementById("textArea");
+  const comment = kommentti.value;
+  fetch("/stress", {
+    headers: {
+      "Content-type": "application/json",
+    },
+    method: "POST",
+    body: JSON.stringify({ result: res, comment, userid }),
+  });
+
+  //Change html elements after click
+  // resultText.style.display = "none";
+  // result.innerText = "Kiitos vastauksesta!";
+  // emoji.style.display = "none";
+  // formi.style.display = "none";
+  // tallenna.style.display = "none";
+  // etusivulle.style.display = "block";
+  // sessionStorage.setItem("testiTehty", testiTehty);
 };
 
 //Check if the test has been done already. This functionality will be implemented differently.
