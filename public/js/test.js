@@ -97,7 +97,7 @@ getNewQuestion = () => {
     sessionStorage.setItem("mostRecentScore", score);
 
     ///Go to result page after last question
-    return window.location.assign("/stressitulokset.html");
+    return window.location.assign("/public/stressitulokset.html");
   }
 
   questionCounter++;

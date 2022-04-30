@@ -48,3 +48,7 @@ if (testiTehty) {
   tallenna.style.display = "none";
   etusivulle.style.display = "block";
 }
+
+etusivulle.onclick = () => {
+  window.location.assign("/public/home.html");
+};
