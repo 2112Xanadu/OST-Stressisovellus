@@ -9,6 +9,10 @@
   box-shadow: none;
 }
 
+.navbar-links {
+  padding-top: 1.5rem;
+}
+
 .logo {
   display: flex;
   text-align: center;
@@ -68,8 +72,7 @@
 
 /* img */
 img {
-  height: 4.5rem;
-  flex-direction: column;
+  height: 3.7rem;
 }
 
 header {
@@ -84,6 +87,7 @@ header {
   }
 
   .navbar-links {
+    padding-top: 0;
     display: none;
     width: 100%;
   }

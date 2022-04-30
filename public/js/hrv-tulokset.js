@@ -38,33 +38,6 @@ const printGraph = (measurements) => {
         }));
         cursor.lineY.set("visible", false);
 
-        //* Readiness (%) *//
-        // Last 7 days
-
-        // Atm generating random data 
-        /* var date = new Date();
-        date.setHours(0, 0, 0, 0);
-        var value = 100;
-
-        function generateData() {
-            value = Math.round((Math.random() * 10 - 5) + value);
-            am5.time.add(date, "day", 1);
-            return {
-                date: date.getTime(),
-                value: value
-            };
-        }
-
-        // measurements data readiness from json
-        function generateDatas(count) {
-            var data = [];
-            for (var i = 0; i < count; ++i) {
-                data.push(generateData());
-            }
-            return data;
-        } */
-
-
         // Create axes
         // https://www.amcharts.com/docs/v5/charts/xy-chart/axes/
         var xAxis = chart.xAxes.push(am5xy.DateAxis.new(root, {
@@ -136,11 +109,9 @@ const ul1 = document.getElementById('checkHrv');
 const printKubios = (measurements) => {
 
     //console.log(measurements);
-    //const html = ``;
     if (measurements.length > 0) {
         const i = measurements.length - 1;
-        //for (let i = 0; i < measurements.length; i++) {
-        const html = `<h2 class="ms-3" >Sykevälivaihteludata</h2>
+        const html = `<h2>HRV-data</h2>
                 <p style="text-align: center; margin-top: 2rem; ">
                 Readiness: ${Math.round((measurements[i].result.readiness) * 100) / 100}<br>
                 Mean_hr_bpm: ${Math.round((measurements[i].result.mean_hr_bpm) * 100) / 100}<br>
@@ -148,7 +119,6 @@ const printKubios = (measurements) => {
         RMSSD(ms): ${Math.round((measurements[i].result.rmssd_ms) * 100) / 100}<br>
                 Stress_index: ${Math.round((measurements[i].result.stress_index) * 100) / 100}</p>`;
         ul1.innerHTML = html;
-        //}
     }
 }
 

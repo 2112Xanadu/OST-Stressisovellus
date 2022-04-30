@@ -20,6 +20,6 @@ signUpForm.addEventListener('submit', async (evt) => {
     const response = await fetch(url + '/auth/register', fetchOptions); // /user
     const json = await response.json();
     alert(json.message);
-    console.log('signUp.js line 22');
+    //console.log('signUp.js line 22');
     location.href = 'index.html';
 });

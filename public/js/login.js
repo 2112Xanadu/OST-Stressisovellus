@@ -4,7 +4,6 @@ const url = 'http://localhost:3000'; // change url when uploading to server
 // select existing html elements
 //const loginForm = document.querySelector('#login-form');
 const loginForm = document.getElementById('login-form');
-const addUserForm = document.getElementById('add-user-form');
 
 console.log('login form?', loginForm);
 
@@ -29,23 +28,7 @@ loginForm.addEventListener('submit', async (evt) => {
         // save token
         sessionStorage.setItem('token', json.token);
         sessionStorage.setItem('user', JSON.stringify(json.user));
+        alert('Sisäänkirjautuminen onnistui');
         location.href = 'home.html';
     }
 });
-
-// submit register form
-/* addUserForm.addEventListener('submit', async (evt) => {
-    evt.preventDefault();
-    const data = serializeJson(addUserForm);
-    const fetchOptions = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    };
-    const response = await fetch(url + '/auth/register', fetchOptions);
-    const json = await response.json();
-    alert(json.message);
-});
- */

@@ -35,7 +35,7 @@ const user_post = async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         console.log("user post form error", errors.array());
-        res.status(400).json({ message: "not valid form data" });
+        res.status(400).json({ message: "Syöttämäsi tiedot olivat puutteellisia. Rekisteröityminen epäonnistui." });
         return;
     }
 
@@ -49,7 +49,7 @@ const user_post = async (req, res) => {
     ];
     const userid = await userModel.insertUser(params);
     res.json({ message: `user inserted with ${userid}.` });
-    console.log('line 50: Registration was successful');
+    //console.log('line 50: Registration was successful');
 };
 
 const logout = (req, res) => {

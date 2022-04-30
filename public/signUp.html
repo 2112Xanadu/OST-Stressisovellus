@@ -15,31 +15,33 @@
 
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Roboto+Mono&amp;display=swap" rel="stylesheet" />
     <link href="bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/signUp.css" />
+    <link rel="stylesheet" href="css/login-signup.css" />
     <link rel="stylesheet" type="text/css" href="css/footer.css">
 </head>
 
 <body>
     <div class="flexi">
         <main>
-            <div class="row boksi gx-5 gy-4">
-                <div class="teksti2">logo tähän</div>
+            <div class="row boksi">
+                <div class="teksti2"><img src="img/cheese.png" alt="Kuva juustosta">
+                    <header class="logo">OST</header>
+                </div>
 
                 <div class="signUpBox col-6">
                     <!-- Student Registration form -->
                     <form id="register-form" action="/user" method="post">
                         <div class="form-group">
                             <h2>Rekisteröidy käyttäjäksi - Opiskelija</h2>
-                            <label for="firstname">Etunimi</label>
+                            <label>Etunimi</label>
                             <input type="text" class="form-control" id="firstname" aria-describedby="firstnameHelp"
                                 name="firstname" placeholder="Onni" required minlength="3" maxlength="20">
                             <label for="lastname">Sukunimi</label>
                             <input type="text" class="form-control" id="lastname" name="lastname"
-                                aria-describedby="lastnameHelp" placeholder="Onnela" required minlength="3"
+                                aria-describedby="lastnameHelp" placeholder="Onnela" required minlength="7"
                                 maxlength="20">
                             <label for="studentnumber">Opiskelijanumero</label>
                             <input type="text" class="form-control" id="studentid" name="studentid"
-                                aria-describedby="studentnumberHelp" placeholder="2112" min="1" required>
+                                aria-describedby="studentnumberHelp" placeholder="Vähintään 7 numeroa" min="7" required>
                             <label for="dateOfBirth">Syntymäaika</label>
                             <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth"
                                 aria-describedby="dateOfBirthHelp" placeholder="Kirjoita syntymäaikasi" min="1950-01-01"
@@ -48,16 +50,16 @@
                             <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
                                 name="email" pattern=".+@metropolia\.fi" placeholder="onni.onnela@metropolia.fi"
                                 required>
-                            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                             <label for="password">Salasana</label>
                             <input type="password" class="form-control" id="password" name="password"
                                 placeholder="Vähintään 8 merkkiä, yksi iso kirjain, yksi erikoismerkki" required>
 
-                            <label class="suostumus" for="suostumus"><input type="checkbox" class="form-check-input"
-                                    id="suostumus" required>&nbsp;&nbsp;Annan suostumukseni tietojeni hyödyntämiseen
-                                Opiskelijoiden
-                                stressitutkimuksessa sekä opiskeluterveydenhuollon palvelujen
-                                optimoinnissa.
+                            <label class="suostumus" for="suostumus">
+                                <p><input type="checkbox" class="form-check-input" id="suostumus" required>
+                                    &nbsp;Annan suostumukseni tietojeni hyödyntämiseen
+                                    Opiskelijoiden
+                                    stressitutkimuksessa sekä opiskeluterveydenhuollon palvelujen
+                                    optimoinnissa.</p>
                             </label>
                             <button type="submit" class="btn btn-secondary">Rekisteröidy</button>
                         </div>

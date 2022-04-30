@@ -1,26 +1,29 @@
+
 'use strict';
 
 // Code for fetching information to homepage
 const url = 'http://localhost:3000'; // change url when uploading to server
 
-// Displays user's firstname
+// Displaying user's firstname
+// select existing html elements
 const h2 = document.getElementById("display_name");
 const user = JSON.parse(sessionStorage.getItem('user'));
 console.log(user);
 h2.innerHTML = user.firstname;
 
-// select existing html elements
-const ul1 = document.getElementById('hrv-data');
-const ul2 = document.getElementById('stress_results');
 
-// Create Kubios card
+// Hrv measurement
+// select existing html elements
+const ul1 = document.getElementById('checkHrv');
+
+// This function prints measurement information from json file.
 const printKubios = (measurements) => {
 
     console.log(measurements);
 
     if (measurements.length > 0) {
         const i = measurements.length - 1;
-        const html = `<h2>Sykevälivaihteludata</h2>
+        const html = `<h2>HRV-data</h2>
                 <p style="text-align: center; margin-top: 2rem; ">
                 Readiness: ${Math.round((measurements[i].result.readiness) * 100) / 100}<br>
                 Mean_hr_bpm: ${Math.round((measurements[i].result.mean_hr_bpm) * 100) / 100}<br>
@@ -31,10 +34,12 @@ const printKubios = (measurements) => {
     }
 }
 
-// Create Stress Survey card
+// Stress survey
+// select existing html elements
+//const ul2 = document.getElementById('stress survey info');
 
 
-// AJAX call for fetching data from Kubios
+// Ajax call for fetching Hrv measurement information
 const getKubios = async () => {
     try {
         const response = await fetch(url + '/kubios');
@@ -45,8 +50,5 @@ const getKubios = async () => {
     }
 };
 
-// Ajax call for fetching stress survey information from database
-
-
-//getKubios();
-//getSurvey();
+// Starting Kubios function.
+getKubios();

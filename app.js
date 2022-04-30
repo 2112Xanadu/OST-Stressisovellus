@@ -3,10 +3,12 @@
 // Creating variables for node modules and port.
 
 const express = require('express');
+const cors = require('cors');
 const session = require('express-session');
 const userRoute = require('./routes/userRoute');
 const authRoute = require('./routes/authRoute');
 const kubiosRoute = require('./routes/kubiosRoute');
+//const surveyRoute = require('./routes/surveyRoute');
 
 const passport = require('./utils/pass');
 const app = express();
@@ -18,6 +20,7 @@ app.use(express.static('public'));
 // Express json for reading and saving json files.
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: true })); // for parsing application/
+app.use(cors());
 app.use(session({
     secret: 'keyboard cat',
     resave: false,
@@ -46,15 +49,15 @@ app.get('/login', loggedIn, (req, res) => {
 app.post('/login',
     passport.authenticate('local', { failureRedirect: '/form' }),
     (req, res) => {
-        console.log('success');
+        //console.log('/login success line 52');
         res.redirect('home.html');
     });
 
-// Route for user, auth, Kubios and stress survey.
+// Routes for user, auth, Kubios and stress survey.
 app.use('/user', passport.authenticate('jwt', { session: false }), userRoute);
 app.use('/auth', authRoute);
 app.use("/kubios", kubiosRoute);
-// app.use("/survey", surveyRoute); 
+/* app.use("/survey", surveyRoute); */
 
 // Function for error if app.js doesn't work.
 app.use((err, req, res, next) => {
