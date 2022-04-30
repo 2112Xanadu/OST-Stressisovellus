@@ -1,0 +1,145 @@
+:root {
+    --bs-primary: #c7ebf0;
+    --bs-secondary: #6c757d;
+
+    --bs-body-font-family: "Nunito Sans", sans-serif;
+}
+
+#left_col {
+    background-color: #c7ebf0;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+}
+
+#right_col {
+    background-color: #c7ebf0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 20px 40px;
+}
+
+.teksti2 {
+    font-size: 17px;
+    background-color: #5d7e83;
+    padding: 50px 12px;
+    font-family: var(--bs-body-font-family);
+    text-align: center;
+    height: 280px;
+    border-radius: 30px;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: var(--bs-secondary) !important;
+    font-weight: 300;
+    margin: 0;
+    -webkit-box-shadow: none !important;
+    box-shadow: 3rem;
+}
+
+.btn.btn-secondary:active:hover {
+    background-color: #97a6b4 !important;
+}
+
+.btn {
+    text-transform: none;
+    letter-spacing: 1px;
+    padding: 0.475rem 0.7rem;
+    font-size: 0.85rem;
+    border-radius: 0.25rem;
+}
+
+.btn-light {
+    color: #0A1045;
+    background-color: #ffffff !important;
+    border-radius: 9px;
+    margin: 0.5rem 0.9rem;
+    padding: 0.6rem 0.9rem;
+    font-weight: 500;
+    font-size: 0.87rem;
+    letter-spacing: 1px;
+}
+
+.btn.btn-light:active:hover {
+    background-color: #f6f7fe !important;
+}
+
+.form-group label {
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    padding-right: 14px;
+    padding-left: 12px;
+}
+
+.bi-person-circle {
+    font-size: 3rem;
+    padding: 0.5rem;
+}
+
+h1 {
+    padding-bottom: 0.02rem;
+}
+
+p {
+    letter-spacing: 0.5px;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.mb-2 {
+    margin-bottom: 0 !important;
+}
+
+@media screen and (max-width: 575.2px) {
+    .container {
+        width: 90%;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    #right_col {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+
+    #left_col {
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 0;
+    }
+
+    .bi-person-circle {
+        font-size: 5rem;
+    }
+
+    h1 {
+        padding-bottom: 0.2rem;
+    }
+
+    #käyttis {
+        margin-top: 3rem !important;
+    }
+
+    #row2 {
+        margin-top: 0 !important;
+    }
+
+    #nappi {
+        margin-bottom: 3rem !important;
+    }
+
+    .mt-5 {
+        margin-top: 3rem !important;
+    }
+
+    .mb-2 {
+        margin-bottom: 0.6rem !important;
+    }
+}

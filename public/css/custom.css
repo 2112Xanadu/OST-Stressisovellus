@@ -1,0 +1,135 @@
+:root {
+  --bs-primary: #c7ebf0;
+  --bs-secondary: #5d7e83;
+
+  --bs-body-font-family: "Nunito Sans", sans-serif;
+  /* "Raleway", sans-serif; */
+  --bs-body-secondary-font-family: "Raleway", sans-serif;
+}
+
+body,
+html {
+  background-color: rgb(218, 255, 253);
+}
+
+.flexi {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+  text-align: center;
+  font-size: 16px;
+  opacity: 1;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: #a5c5c9;
+  border-color: #a5c5c9;
+  opacity: 0.8;
+}
+
+.btn-check:checked+.btn-primary:focus,
+.btn-check:active+.btn-primary:focus,
+.btn-primary:active:focus,
+.btn-primary.active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: 0;
+}
+
+.btn-check:focus+.btn-outline-primary,
+.btn-outline-primary:focus {
+  box-shadow: 0;
+}
+
+.laatikot {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.teksti1 {
+  font-size: 17px;
+  background-color: #fff;
+  padding: 50px 12px;
+  font-family: var(--bs-body-font-family);
+  text-align: center;
+  height: 280px;
+  border-radius: 30px;
+}
+
+.teksti2 {
+  font-size: 17px;
+  background-color: #5d7e83;
+  padding: 50px 12px;
+  font-family: var(--bs-body-font-family);
+  text-align: center;
+  height: 280px;
+  border-radius: 30px;
+}
+
+.h2,
+h2 {
+  font-size: 26px;
+  color: #0A1045;
+  letter-spacing: 0.5px;
+}
+
+#checkHrv h2 {
+  margin-top: 1.5rem;
+  font-weight: 700;
+}
+
+.h4,
+h4 {
+  font-size: 26px;
+  color: #0A1045;
+  letter-spacing: 0.5px;
+}
+
+p {
+  color: #0A1045;
+  letter-spacing: 0.5px;
+  margin-top: 4rem;
+  font-weight: 500;
+}
+
+.laatikko2 p {
+  margin-top: 5rem;
+}
+
+.btn-light {
+  color: #0A1045;
+  background-color: #c7ebf0;
+  border-radius: 9px;
+  border: none;
+  margin: 0.5rem 0.9rem;
+  padding: 0.6rem 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.btn-light:hover {
+  color: #7cc7d3;
+  background-color: #a5c8ce;
+  border-radius: 9px;
+}
+
+@media screen and (max-width: 800px) {
+  col-md-4 {
+    width: 100%;
+  }
+}
