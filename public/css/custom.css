@@ -42,15 +42,15 @@ main {
   opacity: 0.8;
 }
 
-.btn-check:checked + .btn-primary:focus,
-.btn-check:active + .btn-primary:focus,
+.btn-check:checked+.btn-primary:focus,
+.btn-check:active+.btn-primary:focus,
 .btn-primary:active:focus,
 .btn-primary.active:focus,
-.show > .btn-primary.dropdown-toggle:focus {
+.show>.btn-primary.dropdown-toggle:focus {
   box-shadow: 0;
 }
 
-.btn-check:focus + .btn-outline-primary,
+.btn-check:focus+.btn-outline-primary,
 .btn-outline-primary:focus {
   box-shadow: 0;
 }
@@ -83,19 +83,25 @@ main {
 
 .h2,
 h2 {
-  font-size: 20px;
-  color: #0a1045;
+  font-size: 26px;
+  color: #0A1045;
   letter-spacing: 0.5px;
+}
+
+#checkHrv h2 {
+  margin-top: 1.5rem;
+  font-weight: 700;
 }
 
 .h4,
 h4 {
-  color: #0a1045;
+  font-size: 26px;
+  color: #0A1045;
   letter-spacing: 0.5px;
 }
 
 p {
-  color: #0a1045;
+  color: #0A1045;
   letter-spacing: 0.5px;
   margin-top: 4rem;
   font-weight: 500;
@@ -106,7 +112,7 @@ p {
 }
 
 .btn-light {
-  color: #0a1045;
+  color: #0A1045;
   background-color: #c7ebf0;
   border-radius: 9px;
   border: none;
