@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OST-stressisovellus</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&family=Raleway:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Archivo+Black|Roboto+Mono&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="bootstrap-5.1.3-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="css/nav.css" />
+    <link rel="stylesheet" href="css/aboutus.css" />
+
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+  </head>
+
+  <body>
+    <div class="flexi">
+      <nav class="navbar">
+        <header class="logo">
+          <img id="cheese" src="img/cheese.png" alt="picture of cheese" />OST
+        </header>
+
+        <a href="#" class="toggle-button">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </a>
+
+        <section class="navbar-links">
+          <ul>
+            <li><a href="home.html">Etusivu</a></li>
+            <li><a href="stressisivu.html">Stressitasotesti</a></li>
+            <li><a href="hrv-tulokset.html">Oma HRV-data</a></li>
+            <li><a href="signUp.html">Kirjaudu ulos</a></li>
+            <li><a href="profile.html">Profiili</a></li>
+          </ul>
+        </section>
+      </nav>
+      <!-- banner-area-->
+      <div
+        class="container-fluid"
+        style="background-color: #c7ebf0; height: 9rem"
+      >
+        <div class="row h-100">
+          <div class="col-6 col-md-6 align-self-end">
+            <h2 id="" class="ms-3">Tietoa meistä</h2>
+            <h4 id="pvm1" class="text-start d-block d-sm-none ms-3">
+              Päivämäärä
+            </h4>
+          </div>
+          <div class="col-6 align-self-end d-none d-sm-block">
+            <h4 id="pvm2" class="text-end">Tähän päivämäärä</h4>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <div class="container shadow p-3 mb-5 bg-white">
+          <h3>
+            Opiskelijoiden stressitutkimus: <br />
+            Tiimi tutkimuksen takana
+          </h3>
+
+          <!--tiimiläisten kuvat pyöristettyinä:-->
+
+          <fig class="kuva">
+            <img
+              class="rounded-circle z-depth-2 mx-auto d-block"
+              alt="Kuva Gretestä"
+              src="img/grete_pakattu.jpg"
+              data-holder-rendered="true"
+            />
+            <figcaption><b>Grete</b></figcaption>
+          </fig>
+          <fig class="kuva">
+            <img
+              class="rounded-circle z-depth-2 mx-auto d-block"
+              alt="Kuva Joelista"
+              src="img/joel_pakattu-kopio.jpg"
+              data-holder-rendered="true"
+            />
+            <figcaption><b>Joel</b></figcaption>
+          </fig>
+          <fig class="kuva">
+            <img
+              class="rounded-circle z-depth-2 mx-auto d-block"
+              alt="Kuva Teemusta"
+              src="img/teemu2.jpg"
+              data-holder-rendered="true"
+            />
+            <figcaption><b>Teemu</b></figcaption>
+          </fig>
+          <fig class="kuva">
+            <img
+              class="rounded-circle z-depth-2 mx-auto d-block"
+              alt="Kuva Johannasta"
+              src="img/johanna_pakattu.jpg"
+              data-holder-rendered="true"
+            />
+            <figcaption><b>Johanna</b></figcaption>
+          </fig>
+          <!--tiimin esittelyteksti-->
+          <p class="esittelyteksti">
+            <br />Opiskelijoiden stressitutkimus OST:n kehittäjätiimi koostuu
+            neljästä Metropolia Ammattikorkeakoulun tieto- ja viestintätekniikan
+            insinööriopiskelijasta. Kaikilla tiimiläisillä on yhteisenä
+            pääaineena hyvinvointi- ja terveysteknologia. Tavoitteenamme on
+            tarjota puolueetonta dataa ja objektiivista tarkastelua sisältävä
+            tutkimus sekä sitä tukeva, toimiva ja turvallinen sovellus.
+            Tutkimuskohteena toimivat Suomessa opiskelevat ja suomalaiset
+            korkeakouluopiskelijat sekä valtakunnalliset hyvinvointipalvelut ja
+            niiden resurssointi.<br />
+          </p>
+        </div>
+      </main>
+
+      <footer>
+        <section class="footer-content">
+          <ul>
+            <li>
+              <a href="">Ota yhteyttä</a>
+            </li>
+            <li>
+              <a href="">Tietoa meistä</a>
+            </li>
+
+            <li>
+              <a class="active" href="">Tietosuojaseloste</a>
+            </li>
+          </ul>
+          <p class="copyright">Copyright &copy; OST. 2022.</p>
+        </section>
+      </footer>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/nav.js"></script>
+    <script src="js/banner.js"></script>
+    <script src="js/serialize.js"></script>
+    <script src="js/check-login.js"></script>
+  </body>
+</html>
