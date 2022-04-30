@@ -5,13 +5,18 @@
   background-color: #64b3d2;
   color: #000;
   font-family: "Raleway", sans-serif;
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .logo {
+  display: flex;
+  text-align: center;
+
   color: #4b6569;
   font-size: 30px;
   letter-spacing: 1px;
-  margin: 1rem;
+  margin: 0.5rem;
   font-weight: 600;
 }
 
@@ -27,7 +32,7 @@
 
 .navbar-links a {
   text-decoration: none;
-  font-size: 15px;
+  font-size: 18px;
   letter-spacing: 1.4px;
   color: #4b6569;
   font-weight: 600;
@@ -45,7 +50,7 @@
 
 .toggle-button {
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   right: 2rem;
   display: none;
   flex-direction: column;
@@ -61,7 +66,19 @@
   border-radius: 10px;
 }
 
-@media screen and (max-width: 858px) {
+/* img */
+img {
+  height: 4.5rem;
+  flex-direction: column;
+}
+
+header {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+@media screen and (max-width: 965px) {
   .toggle-button {
     display: flex;
   }
