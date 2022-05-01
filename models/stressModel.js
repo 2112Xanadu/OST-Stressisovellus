@@ -20,12 +20,11 @@ const insertStressResult = async (stressResult) => {
     console.error("You have a problem: ", e.message);
   }
 };
-
-// Get latest result from single user
+// Get users latest stress result
 const getUserResult = async (id) => {
   try {
     const [rows] = await promisePool.query(
-      "SELECT result FROM stress WHERE userid = 1",
+      "SELECT result FROM stress WHERE userid = ?",
       [id]
     );
     return rows[0];
@@ -34,7 +33,20 @@ const getUserResult = async (id) => {
   }
 };
 
+const getUserComment = async (params) => {
+  try {
+    const [rows] = await promisePool.query(
+      "SELECT comment FROM stress WHERE userid = ?",
+      [params]
+    );
+    return rows;
+  } catch (e) {
+    console.error("stress model get result by id", e.message);
+  }
+};
+
 module.exports = {
   insertStressResult,
   getUserResult,
+  getUserComment,
 };

@@ -41,6 +41,7 @@ tallenna.onclick = () => {
 
   fetch("/stress", {
     headers: {
+      Authorization: "Bearer " + token,
       "Content-type": "application/json",
     },
     method: "POST",
@@ -64,7 +65,7 @@ const getResult = async () => {
         Authorization: "Bearer " + token,
       },
     };
-    const response = await fetch(url + "/stress/:result", fetchOptions);
+    const response = await fetch(url + "/", fetchOptions);
     const rslts = await response.json();
     console.log("All stress results: ", rslts);
     return rslts;

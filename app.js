@@ -61,8 +61,13 @@ app.post(
 // Routes for user, auth, Kubios and stress survey.
 app.use("/user", passport.authenticate("jwt", { session: false }), userRoute);
 app.use("/auth", authRoute);
-app.use("/stress", stressRoute);
+app.use(
+  "/stress",
+  passport.authenticate("jwt", { session: false }),
+  stressRoute
+);
 app.use("/kubios", kubiosRoute);
+app.use("stress/:comment", stressRoute);
 /* app.use("/survey", surveyRoute); */
 
 // Function for error if app.js doesn't work.
