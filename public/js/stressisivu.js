@@ -5,8 +5,8 @@ const testiTehty = sessionStorage.getItem("testiTehty");
 
 testButton.onclick = () => {
   if (testiTehty) {
-    window.location.assign("/public/stressitulokset.html");
+    window.location.assign("/stressitulokset.html");
   } else {
-    window.location.assign("/public/testi.html");
+    window.location.assign("/testi.html");
   }
 };

@@ -50,5 +50,5 @@ if (testiTehty) {
 }
 
 etusivulle.onclick = () => {
-  window.location.assign("/public/home.html");
+  window.location.assign("/home.html");
 };
