@@ -135,6 +135,11 @@ p {
   text-align: left;
   font-size: 1rem;
 }
+
+#etole {
+  text-align: center;
+  margin-top: 100px;
+}
 @media screen and (max-width: 1000px) {
   #checkStress p {
     margin: 1rem 1rem 1rem 1rem;

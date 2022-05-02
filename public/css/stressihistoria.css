@@ -62,7 +62,7 @@ main {
 
 .teksti1 {
   background-color: #fff;
-  padding: 50px 12px;
+  padding: 1px 12px;
   font-family: var(--bs-body-font-family);
   text-align: center;
   height: 280px;
