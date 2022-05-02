@@ -42,15 +42,15 @@ main {
   opacity: 0.8;
 }
 
-.btn-check:checked+.btn-primary:focus,
-.btn-check:active+.btn-primary:focus,
+.btn-check:checked + .btn-primary:focus,
+.btn-check:active + .btn-primary:focus,
 .btn-primary:active:focus,
 .btn-primary.active:focus,
-.show>.btn-primary.dropdown-toggle:focus {
+.show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0;
 }
 
-.btn-check:focus+.btn-outline-primary,
+.btn-check:focus + .btn-outline-primary,
 .btn-outline-primary:focus {
   box-shadow: 0;
 }
@@ -67,7 +67,7 @@ main {
   padding: 50px 12px;
   font-family: var(--bs-body-font-family);
   text-align: center;
-  height: 280px;
+  height: 300px;
   border-radius: 30px;
 }
 
@@ -77,31 +77,25 @@ main {
   padding: 50px 12px;
   font-family: var(--bs-body-font-family);
   text-align: center;
-  height: 280px;
+  height: 300px;
   border-radius: 30px;
 }
 
 .h2,
 h2 {
   font-size: 26px;
-  color: #0A1045;
+  color: #0a1045;
   letter-spacing: 0.5px;
-}
-
-#checkHrv h2 {
-  margin-top: 1.5rem;
-  font-weight: 700;
 }
 
 .h4,
 h4 {
   font-size: 26px;
-  color: #0A1045;
+  color: #0a1045;
   letter-spacing: 0.5px;
 }
-
 p {
-  color: #0A1045;
+  color: #0a1045;
   letter-spacing: 0.5px;
   margin-top: 4rem;
   font-weight: 500;
@@ -112,7 +106,7 @@ p {
 }
 
 .btn-light {
-  color: #0A1045;
+  color: #0a1045;
   background-color: #c7ebf0;
   border-radius: 9px;
   border: none;
@@ -126,6 +120,25 @@ p {
   color: #7cc7d3;
   background-color: #a5c8ce;
   border-radius: 9px;
+}
+#checkHrv h2 {
+  margin-top: 1.5rem;
+  font-weight: 700;
+}
+
+#checkStress h2 {
+  margin-top: 1.5rem;
+  font-weight: 700;
+}
+#checkStress p {
+  margin: 1.5rem 2rem 0 2rem;
+  text-align: left;
+  font-size: 1rem;
+}
+@media screen and (max-width: 1000px) {
+  #checkStress p {
+    margin: 1rem 1rem 1rem 1rem;
+  }
 }
 
 @media screen and (max-width: 800px) {

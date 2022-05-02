@@ -67,7 +67,6 @@ app.use(
   stressRoute
 );
 app.use("/kubios", kubiosRoute);
-app.use("stress/:comment", stressRoute);
 /* app.use("/survey", surveyRoute); */
 
 // Function for error if app.js doesn't work.

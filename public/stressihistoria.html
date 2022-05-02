@@ -61,8 +61,10 @@
         <section class="navbar-links">
           <ul>
             <li><a href="home.html">Etusivu</a></li>
-            <li><a href="stressisivu.html">Stressitasotesti</a></li>
-            <li><a class="active" href="hrv-tulokset.html">Oma HRV-data</a></li>
+            <li>
+              <a class="active" href="stressisivu.html">Stressitasotesti</a>
+            </li>
+            <li><a href="hrv-tulokset.html">Oma HRV-data</a></li>
             <li><a href="logout.html">Kirjaudu ulos</a></li>
             <li><a href="profile.html">Profiili</a></li>
           </ul>
@@ -85,18 +87,11 @@
         <div class="container overflow-hidden">
           <div class="row laatikot gx-0 gy-4">
             <div class="laatikko1 col-md-4">
-              <div
-                id="checkHrv"
-                class="teksti1 border shadow p-3 mb-5 bg-white"
-              >
-                <p>
-                  Et ole tänään tehnyt HRV-mittausta. <br />Tee
-                  Readiness-mittaus Kubios-sovelluksessa ja päivitä etusivu.
-                </p>
-
+              <div class="teksti1 border shadow p-3 mb-5">
+                <div id="ressi"></div>
                 <!-- js creates new content here 
                                 
-                                <h2>HRV-data</h2>
+                                <h2>Stress data</h2>
                                 
                                 Readiness: 49.26611468531469
                                 Mean_hr_bpm: 87.43865056366103

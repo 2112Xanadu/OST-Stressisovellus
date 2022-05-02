@@ -31,6 +31,7 @@ const etusivulle = document.getElementById("etusivulle");
 etusivulle.style.display = "none";
 
 //Automatically scroll to view specific element
+
 laatikkoinen.scrollIntoView(true);
 
 //Save results to database
@@ -45,7 +46,11 @@ tallenna.onclick = () => {
       "Content-type": "application/json",
     },
     method: "POST",
-    body: JSON.stringify({ result: stressResult, comment, userid }),
+    body: JSON.stringify({
+      result: stressResult,
+      comment,
+      userid,
+    }),
   });
 
   //Change html elements after click
@@ -86,4 +91,9 @@ getResult();
 
 etusivulle.onclick = () => {
   window.location.assign("/home.html");
+};
+
+const aiemmat = document.getElementById("aiemmat");
+aiemmat.onclick = () => {
+  window.location.assign("/stressihistoria.html");
 };

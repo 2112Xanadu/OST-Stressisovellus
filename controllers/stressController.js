@@ -20,7 +20,7 @@ const stress_result_get = async (req, res) => {
 
 const stress_comment_get = async (req, res) => {
   try {
-    const result = await stressModel.getUserComment(req.user.comment);
+    const result = await stressModel.getUserComment(req.user.userid);
     res.json(result);
   } catch (e) {
     console.log("erRRR controller", e.message);

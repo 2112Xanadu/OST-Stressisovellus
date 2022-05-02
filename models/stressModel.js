@@ -24,20 +24,20 @@ const insertStressResult = async (stressResult) => {
 const getUserResult = async (id) => {
   try {
     const [rows] = await promisePool.query(
-      "SELECT result FROM stress WHERE userid = ?",
+      "SELECT result, comment, dateAndTime FROM stress WHERE userid = ?",
       [id]
     );
-    return rows[0];
+    return rows;
   } catch (e) {
     console.error("stress model get result by id", e.message);
   }
 };
 
-const getUserComment = async (params) => {
+const getUserComment = async (id) => {
   try {
     const [rows] = await promisePool.query(
       "SELECT comment FROM stress WHERE userid = ?",
-      [params]
+      [id]
     );
     return rows;
   } catch (e) {

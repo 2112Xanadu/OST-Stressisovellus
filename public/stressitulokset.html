@@ -91,7 +91,8 @@
                     class="form-control"
                     id="textArea"
                     rows="4"
-                    placeholder="Tähän voit kirjoittaa omia merkintöjä."
+                    placeholder="Tähän voit kirjoittaa omia merkintöjä (max 140 merkkiä)."
+                    maxlength="140"
                   ></textarea>
                 </div>
               </form>
@@ -112,7 +113,7 @@
 
               <!-- Show all the results -->
               <div class="row" style="padding: 0 0 10px 10px">
-                <button type="button" class="btn btn-light">
+                <button id="aiemmat" type="button" class="btn btn-light">
                   Aiemmat tulokset
                 </button>
               </div>
