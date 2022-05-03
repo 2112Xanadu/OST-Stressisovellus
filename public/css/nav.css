@@ -1,10 +1,21 @@
+:root {
+  --bs-blue: rgb(100, 179, 210);
+  --bs-nav-links: rgb(75, 101, 105);
+  --bs-nav-links-active: rgb(29, 124, 137);
+  --bs-nav-links-hover: rgb(56, 75, 78);
+  --ns-toggle-button: rgb(93, 126, 131);
+  --bs-nav-font-family: "Raleway",
+  sans-serif;
+  --bs-logo: rgb(75, 101, 105);
+}
+
 .navbar {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #64b3d2;
+  background-color: var(--bs-blue);
   color: #000;
-  font-family: "Raleway", sans-serif;
+  font-family: var(--bs-nav-font-family);
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -16,8 +27,7 @@
 .logo {
   display: flex;
   text-align: center;
-
-  color: #4b6569;
+  color: var(--bs-logo);
   font-size: 30px;
   letter-spacing: 1px;
   margin: 0.5rem;
@@ -38,18 +48,18 @@
   text-decoration: none;
   font-size: 18px;
   letter-spacing: 1.4px;
-  color: #4b6569;
+  color: var(--bs-nav-links);
   font-weight: 600;
   padding: 1.5rem;
   display: block;
 }
 
 .navbar-links a.active {
-  color: #1d7c89;
+  color: var(--bs-nav-links-active);
 }
 
 .navbar-links a:hover {
-  color: #384b4e;
+  color: var(--bs-nav-links-hover);
 }
 
 .toggle-button {
@@ -66,7 +76,7 @@
 .toggle-button .bar {
   height: 3px;
   width: 100%;
-  background-color: #5d7e83;
+  background-color: var(--ns-toggle-button);
   border-radius: 10px;
 }
 

@@ -1,8 +1,17 @@
+:root {
+  --bs-blue: rgb(100, 179, 210);
+  --bs-footer-links: rgb(75, 101, 105);
+  --bs-footer-links-hover: rgb(46, 62, 65);
+  --bs-body-font-family: "Nunito Sans",
+  sans-serif;
+}
+
 .footer-content {
   padding: 30px;
-  background-color: #64b3d2;
+  background-color: var(--bs-blue);
   margin-top: auto;
   bottom: 0;
+  font-family: var(--bs-body-font-family);
 }
 
 .footer-content ul {
@@ -17,11 +26,11 @@
   text-decoration: none;
   font-size: 18px;
   letter-spacing: 1px;
-  color: #4b6569;
+  color: var(--bs-footer-links);
 }
 
 .footer-content a:hover {
-  color: #2e3e41;
+  color: var(--bs-footer-links-hover);
 }
 
 .footer-content ul li {
@@ -30,7 +39,7 @@
 }
 
 .copyright {
-  color: #2e4143;
+  color: rgb(46, 65, 67);
   margin-top: 15px;
   text-align: center;
   font-size: 14px;
