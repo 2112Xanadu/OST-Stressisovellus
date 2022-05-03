@@ -23,14 +23,14 @@ const printKubios = (measurements) => {
 
     if (measurements.length > 0) {
         const i = measurements.length - 1;
-        const html = `<a href='info.html' id='infolink' style="text-align: rigth;" title="Lisätietoa HRV-arvoista" ><i class="bi bi-question-circle fa-lg" style="text-align: rigth;"></i></a><br>
-        <h2>HRV-data</h2>
+        const html = `<h2>Viimeisin HRV-data</h2>
                 <p style="text-align: center; margin-top: 0.5rem; ">
                 Readiness: ${Math.round((measurements[i].result.readiness) * 100) / 100}<br>
                 Mean_hr_bpm: ${Math.round((measurements[i].result.mean_hr_bpm) * 100) / 100}<br>
                 PNS-index: ${Math.round((measurements[i].result.pns_index) * 100) / 100}<br>
         RMSSD(ms): ${Math.round((measurements[i].result.rmssd_ms) * 100) / 100}<br>
                 Stress_index: ${Math.round((measurements[i].result.stress_index) * 100) / 100}</p>
+                <a href='info.html' id='infolink' style="text-align: rigth;" title="Lisätietoa HRV-arvoista" ><i class="bi bi-question-circle fa-lg" style="text-align: rigth;"></i></a>
                 `;
         ul1.innerHTML = html;
     }
@@ -62,7 +62,7 @@ const dailyStress = document.getElementById("checkStress");
 const printStress = (stress) => {
     console.log("toimiiko" + stress);
     if (stress.length > 0) {
-        const html = `<h2>Stressidata</h2>
+        const html = `<h2>Viimeisimmän stressikyselyn tulokset</h2>
                     <p>
                     <b>Stressitasotestin tulos:</b> ${stress[stress.length - 1].result
             }<br>
