@@ -1,5 +1,8 @@
 'use strict';
 
+// Source: https://gitlab.metropolia.fi/hyte2022/kubios/-/blob/main/app.js
+// Creating variables for node modules.
+
 require('dotenv').config();
 const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
 
@@ -10,6 +13,8 @@ const userAgent = 'Kubios 0.1';
 
 // Login function is for login in to Kubios Cloud account and after login user can fetch information
 // from Kubios Cloud server for example user's readiness measurement values.
+
+//* FETCHING DATA FROM KUBIOS CLOUD NOT WORKING SINCE WE DIDNT HAVE TIME TO FINISH IT :( */
 
 const login = async () => {
     const cookie = 'keyboardCatRandom';
@@ -38,8 +43,7 @@ const login = async () => {
     return token;
 };
 
-// kubiosFetch function is for fetching user information from Kubios Cloud server.
-
+// kubiosFetch for fetching user's information from Kubios Cloud server.
 const kubiosFetch = async () => {
 
     const person = async () => {
@@ -49,18 +53,15 @@ const kubiosFetch = async () => {
         const json = await response.json();
         console.log('json', json);
     };
-
     person();
 };
 
-// This function will get user's Kubios measurements from Kubios Cloud server.
-// fetchingMeasurementId function will get all the id's of the measurements' user has done using Kubios.
-// fetchingMeasurementValue function will get readiness measurement results for each id.
-
+// Kubios fetch measurement function will get user's Kubios measurement data from Kubios Cloud server.
 const kubiosFetchMeasurement = async (user_id) => {
     let vastaus = [];
     try {
 
+        // Fetching measurement value function for getting readiness measurement results for each id.
         const fetchingMeasurementValue = async (token, myHeaders, json, user_id) => {
 
             /* console.log("Testing:", json.results[0].result_id); */
@@ -79,13 +80,13 @@ const kubiosFetchMeasurement = async (user_id) => {
                     "\nMeasurement user happiness:", jsonMeasure.result.user_happiness, "\n");
                 vastaus.push(jsonMeasure);
             } */
-            // TODO
             const response = await fetch('http://localhost:3000/json/all_results.json');
             console.log(response);
             const jsonMittaus = await response.json();
             vastaus = jsonMittaus.results;
         };
 
+        // Fetching measurement id function for getting all the id's of the measurements user has done using Kubios application.
         const fetchingMeasurementId = async (user_id) => {
             const token = await login();
             console.log('fetching measurements id 85 ', token);
@@ -103,7 +104,7 @@ const kubiosFetchMeasurement = async (user_id) => {
     }
 };
 
-// Exporting functions.
+// Exporting functions
 module.exports = {
     kubiosFetch,
     kubiosFetchMeasurement,

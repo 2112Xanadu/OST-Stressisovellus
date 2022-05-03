@@ -1,15 +1,16 @@
 "use strict"
 
 // Kubios controller for get function.
+// Source: https://github.com/patrick-ausderau/wop
 // Creating variables for node modules and kubios model.
 
 const kubiosModel = require("../models/kubiosModel");
 const { validationResult, validationResults } = require("express-validator");
 
-// Async function for getting all the diaries from database.
+// Async function for getting kubios data
 const kubios_fetch = async () => {
     const kubios = await kubiosModel.kubiosFetch();
-    console.log("AreEEEEEEEE we in kubios_fetch function?");
+    //console.log("AreEEEEEEEE we in kubios_fetch function?");
     console.log("kubios controller get user information", kubios);
     //res.json(kubios);
 };
@@ -22,6 +23,7 @@ const kubios_fetch_measurement = async (req, res) => {
     res.json(kubios_measurements);
 };
 
+// Exporting functions
 module.exports = {
     kubios_fetch,
     kubios_fetch_measurement,

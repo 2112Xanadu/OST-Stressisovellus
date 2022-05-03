@@ -1,5 +1,7 @@
 "use strict";
 
+// Based on course material (source: https://github.com/patrick-ausderau/wop)
+// https://expressjs.com/, https://github.com/npatel023/ExpressMySQL/, https://www.passportjs.org/concepts/authentication/middleware/
 // Creating variables for node modules and port.
 
 const express = require("express");
@@ -9,8 +11,8 @@ const userRoute = require("./routes/userRoute");
 const authRoute = require("./routes/authRoute");
 const kubiosRoute = require("./routes/kubiosRoute");
 const stressRoute = require("./routes/stressRoute");
-
 const passport = require("./utils/pass");
+
 const app = express();
 const port = 3000;
 
@@ -39,6 +41,7 @@ const loggedIn = (req, res, next) => {
   }
 };
 
+// Basic routing
 app.get("/login", loggedIn, (req, res) => {
   if (req.session.logged === true) {
     //res.render('home');
@@ -48,26 +51,19 @@ app.get("/login", loggedIn, (req, res) => {
   }
 });
 
-app.post(
-  "/login",
-  passport.authenticate("local", { failureRedirect: "/form" }),
-  (req, res) => {
-    //console.log('/login success line 52');
-    res.redirect("home.html");
-  }
+app.post("/login", passport.authenticate("local", { failureRedirect: "/form" }), (req, res) => {
+  //console.log('/login success line 52');
+  res.redirect("home.html");
+}
 );
 
 // Routes for user, auth, Kubios and stress survey.
 app.use("/user", passport.authenticate("jwt", { session: false }), userRoute);
 app.use("/auth", authRoute);
 app.use("/kubios", kubiosRoute);
-app.use(
-  "/stress",
-  passport.authenticate("jwt", { session: false }),
-  stressRoute
-);
+app.use("/stress", passport.authenticate("jwt", { session: false }), stressRoute);
 
-// Function for error if app.js doesn't work.
+// For errors if app.js doesn't work.
 app.use((err, req, res, next) => {
   const status = err.status || 500;
   res.status(status).send(err.message || "internal error");

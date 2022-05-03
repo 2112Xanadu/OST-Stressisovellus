@@ -1,8 +1,13 @@
 "use strict";
 
+// Based on course material (source: https://github.com/patrick-ausderau/wop)
+// Stress model
+// Creating variables for node modules.
+
 const pool = require("../database/db");
 const promisePool = pool.promise();
 
+// Insert stress result
 const insertStressResult = async (stressResult) => {
   try {
     const [rows] = await promisePool.query(
@@ -20,7 +25,8 @@ const insertStressResult = async (stressResult) => {
     console.error("You have a problem: ", e.message);
   }
 };
-// Get users latest stress result
+
+// Get user's latest stress result
 const getUserResult = async (id) => {
   try {
     const [rows] = await promisePool.query(
@@ -33,6 +39,7 @@ const getUserResult = async (id) => {
   }
 };
 
+// Get user's comment
 const getUserComment = async (id) => {
   try {
     const [rows] = await promisePool.query(
@@ -45,6 +52,7 @@ const getUserComment = async (id) => {
   }
 };
 
+// Exporting functions
 module.exports = {
   insertStressResult,
   getUserResult,

@@ -2,7 +2,7 @@
 
 // Based on course material (source: https://github.com/patrick-ausderau/wop)
 // User controller for get functions.
-// Creating variables for node modules and kubios model.
+// Creating variables for node modules and user model.
 
 const userModel = require("../models/userModel");
 const { validationResult } = require("express-validator");
@@ -14,7 +14,7 @@ const user_list_get = async (req, res) => {
     res.json(users);
 };
 
-// User post for new user registration
+// User get for displaying one user
 const user_get = async (req, res) => {
     try {
         console.log("user controller get", req.user);
@@ -23,7 +23,7 @@ const user_get = async (req, res) => {
     } catch (e) {
         next(e);
     }
-};
+}
 
 // Token check
 const checkToken = (req, res, next) => {
@@ -34,7 +34,7 @@ const checkToken = (req, res, next) => {
     }
 };
 
-// Exports
+// Exporting functions
 module.exports = {
     user_list_get,
     user_get,

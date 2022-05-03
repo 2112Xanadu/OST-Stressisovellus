@@ -1,6 +1,7 @@
 'use strict';
 
 // Based on course material (source: https://github.com/patrick-ausderau/wop)
+// https://expressjs.com/en/api.html#req
 // This file is for User route which will lead user actions
 // Creating variables for node modules and route.
 
@@ -19,7 +20,7 @@ router.route('/')
 
 router.route('/:id')
     .delete((req, res) => {
-        res.send(`From this endpoint you can delete user with id ${req.params.id}.`);
+        res.send(`From this endpoint you can delete user with id ${req.params.id}.`); // Not working yet
     });
 
 // Check token
