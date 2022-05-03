@@ -70,7 +70,7 @@ const printGraph = (measurements) => {
             textAlign: "center",
             x: am5.percent(50),
             centerX: am5.percent(50),
-            paddingTop: -20,
+            paddingTop: -18,
             paddingBottom: 30
         }));
 
