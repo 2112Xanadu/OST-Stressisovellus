@@ -11,7 +11,7 @@ const testDate = localStorage.getItem("testDate");
 const user = sessionStorage.getItem("user");
 const userid = JSON.parse(user).userid;
 const token = sessionStorage.getItem("token");
-console.log(token);
+const aiemmat = document.getElementById("aiemmat");
 const url = "http://localhost:3000";
 
 //Display emoji, score and comment
@@ -74,11 +74,11 @@ if (testDate == dateToDisplay) {
   etusivulle.style.display = "block";
 }
 
-const aiemmat = document.getElementById("aiemmat");
+//Go to stressihistoria.html when clicked
 aiemmat.onclick = () => {
   window.location.assign("/stressihistoria.html");
 };
-
+//Go to front page when clicked
 etusivulle.onclick = () => {
   window.location.assign("/home.html");
 };

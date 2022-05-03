@@ -1,14 +1,15 @@
 :root {
-  --bs-blue: rgb(100, 179, 210);
-  --bs-primary: rgb(199, 235, 240);
-  --bs-background: rgb(218, 255, 253);
+  --bs-primary: #c7ebf0;
+  --bs-secondary: #5d7e83;
 
   --bs-body-font-family: "Nunito Sans", sans-serif;
+  /* "Raleway", sans-serif; */
+  --bs-body-secondary-font-family: "Raleway", sans-serif;
 }
 
 body,
 html {
-  background-color: var(--bs-background);
+  background-color: rgb(218, 255, 253);
 }
 
 .flexi {
@@ -24,7 +25,7 @@ main {
 }
 
 .btn-primary {
-  color: rgb(255, 255, 255);
+  color: #fff;
   background-color: var(--bs-primary);
   border-color: var(--bs-primary);
   text-align: center;
@@ -35,9 +36,9 @@ main {
 }
 
 .btn-primary:hover {
-  color: rgb(255, 255, 255);
-  background-color: rgb(165, 197, 201);
-  border-color: rgb(165, 197, 201);
+  color: #fff;
+  background-color: #a5c5c9;
+  border-color: #a5c5c9;
   opacity: 0.8;
 }
 
@@ -55,15 +56,13 @@ main {
 }
 
 .laatikot {
-  color: white;
   display: flex;
   justify-content: space-around;
 }
 
 .teksti1 {
-  font-size: 17px;
-  background-color: rgb(255, 255, 255);
-  padding: 50px 12px;
+  background-color: #fff;
+  padding: 1px 12px;
   font-family: var(--bs-body-font-family);
   text-align: center;
   height: 280px;
@@ -71,7 +70,6 @@ main {
 }
 
 .teksti2 {
-  font-size: 17px;
   background-color: #5d7e83;
   padding: 50px 12px;
   font-family: var(--bs-body-font-family);
@@ -79,40 +77,26 @@ main {
   height: 280px;
   border-radius: 30px;
 }
+#ressi {
+  text-align: left;
+  margin: 1.5rem 1rem 7rem 1.5rem;
+}
 
 .h2,
 h2 {
-  font-size: 26px;
-  color: rgb(10, 16, 69);
+  color: #0a1045;
   letter-spacing: 0.5px;
-}
-
-#checkHrv h2 {
-  margin-top: 1.5rem;
-  font-weight: 700;
-}
-
-#infolink {
-  color: #5d7e83;
-  text-decoration: none;
-  text-align: right !important;
-}
-
-#infolink:hover {
-  color: var(--bs-blue);
 }
 
 .h4,
 h4 {
-  font-size: 26px;
-  color: rgb(10, 16, 69);
+  color: #0a1045;
   letter-spacing: 0.5px;
 }
 
 p {
-  color: rgb(10, 16, 69);
+  color: #0a1045;
   letter-spacing: 0.5px;
-  margin-top: 4rem;
   font-weight: 500;
 }
 
@@ -121,8 +105,8 @@ p {
 }
 
 .btn-light {
-  color: rgb(10, 16, 69);
-  background-color: rgb(199, 235, 240);
+  color: #0a1045;
+  background-color: #c7ebf0;
   border-radius: 9px;
   border: none;
   margin: 0.5rem 0.9rem;
@@ -132,28 +116,9 @@ p {
 }
 
 .btn-light:hover {
-  color: rgb(124, 199, 211);
-  background-color: rgb(165, 200, 206);
+  color: #7cc7d3;
+  background-color: #a5c8ce;
   border-radius: 9px;
-}
-#checkStress h2 {
-  margin-top: 1.5rem;
-  font-weight: 700;
-}
-#checkStress p {
-  margin: 1.5rem 2rem 0 2rem;
-  text-align: left;
-  font-size: 1rem;
-}
-
-#etole {
-  text-align: center;
-  margin-top: 100px;
-}
-@media screen and (max-width: 1000px) {
-  #checkStress p {
-    margin: 1rem 1rem 1rem 1rem;
-  }
 }
 
 @media screen and (max-width: 800px) {

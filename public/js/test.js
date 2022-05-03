@@ -65,11 +65,10 @@ startTest = () => {
   getNewQuestion();
 };
 
-//This section needs comments
+//THIS NEEDS COMMENTS
 choices.forEach((choice) => {
   choice.addEventListener("click", (e) => {
     if (!acceptingAnswers) return;
-
     acceptingAnswers = false;
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset["number"];
@@ -121,7 +120,6 @@ getNewQuestion = () => {
   } else {
     vika.style.display = "block";
   }
-
   questions.splice(questionIndex, 1);
   acceptingAnswers = true;
 };
