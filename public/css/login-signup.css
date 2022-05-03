@@ -3,7 +3,7 @@
   --bs-background: rgb(218, 255, 253);
 
   --bs-body-font-family: "Nunito Sans", sans-serif;
-  
+
   --bs-logo: rgb(75, 101, 105);
 }
 
@@ -131,4 +131,8 @@ input {
 
 #suostumus {
   margin-bottom: 0;
+}
+
+#kirjaudu {
+  margin: 1rem 0 1.5rem 0;
 }
