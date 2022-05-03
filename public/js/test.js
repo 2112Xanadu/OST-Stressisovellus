@@ -3,6 +3,7 @@ const choices = Array.from(document.getElementsByClassName("choice-text"));
 const questionCounterText = document.getElementById("questionCounter");
 const scoreText = document.getElementById("score");
 const testilaatikko = document.getElementById("testilaatikko");
+
 let currentQuestion = {};
 let acceptingAnswers = true;
 let score = 0;
@@ -11,6 +12,8 @@ const SCORE_ANSWER1 = 0;
 const SCORE_ANSWER2 = 1;
 const SCORE_ANSWER3 = 2;
 const MAX_QUESTIONS = 5;
+
+//Hard-coded questions and answers
 let questions = [
   {
     question:
@@ -60,12 +63,16 @@ let questions = [
   },
 ];
 
+//The stress test is based on code from the following repository (quite heavily modified though...):
+//https://github.com/jamesqquick/Build-A-Quiz-App-With-HTML-CSS-and-JavaScript.
+
+//Start the test with question counter set at zero
 startTest = () => {
   questionCounter = 0;
   getNewQuestion();
 };
 
-//THIS NEEDS COMMENTS
+//Go through choices, get chosen answer and increment score on click
 choices.forEach((choice) => {
   choice.addEventListener("click", (e) => {
     if (!acceptingAnswers) return;
@@ -73,6 +80,7 @@ choices.forEach((choice) => {
     const selectedChoice = e.target;
     const selectedAnswer = selectedChoice.dataset["number"];
 
+    //Set score for each choice
     if (selectedAnswer == currentQuestion.answer1) {
       incrementScore(SCORE_ANSWER1);
     } else if (
@@ -84,18 +92,18 @@ choices.forEach((choice) => {
     } else {
       incrementScore(SCORE_ANSWER2);
     }
-
     console.log(score);
     getNewQuestion();
   });
 });
 
+//Function to a get new question or move on to result page
 getNewQuestion = () => {
   if (questions.length === 0 || questionCounter == MAX_QUESTIONS) {
-    //Save test score in session starage
+    //Save test score in session storage
     sessionStorage.setItem("mostRecentScore", score);
 
-    ///Go to result page after last question
+    //Go to result page after last question
     return window.location.assign("/stressitulokset.html");
   }
 
@@ -131,5 +139,5 @@ incrementScore = (num) => {
 
 startTest();
 
-//Automatically scroll to view specific element
+//Automatically scroll to view test box
 testilaatikko.scrollIntoView(false);

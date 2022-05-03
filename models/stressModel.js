@@ -7,7 +7,7 @@
 const pool = require("../database/db");
 const promisePool = pool.promise();
 
-// Insert stress result
+//Insert stress questionnaire result into the database
 const insertStressResult = async (stressResult) => {
   try {
     const [rows] = await promisePool.query(
@@ -26,7 +26,7 @@ const insertStressResult = async (stressResult) => {
   }
 };
 
-// Get user's latest stress result
+// Get users latest stress result
 const getUserResult = async (id) => {
   try {
     const [rows] = await promisePool.query(
@@ -35,20 +35,7 @@ const getUserResult = async (id) => {
     );
     return rows;
   } catch (e) {
-    console.error("stress model get result by id", e.message);
-  }
-};
-
-// Get user's comment
-const getUserComment = async (id) => {
-  try {
-    const [rows] = await promisePool.query(
-      "SELECT comment FROM stress WHERE userid = ?",
-      [id]
-    );
-    return rows;
-  } catch (e) {
-    console.error("stress model get result by id", e.message);
+    console.error("ERROR, stress model get result by id", e.message);
   }
 };
 
@@ -56,5 +43,4 @@ const getUserComment = async (id) => {
 module.exports = {
   insertStressResult,
   getUserResult,
-  getUserComment,
 };
