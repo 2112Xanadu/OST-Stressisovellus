@@ -1,35 +1,57 @@
+
 @media (max-width: 1300px) { 
     .tausta{
-        height: 300px;
+        height: 350px;
+    }
+ }
+ @media (max-width: 1200px) { 
+    .tausta{
+        height: 380px;
     }
  }
 
 
  @media (max-width: 990px) { 
     .tausta{
-        height: 400px;
+        height: 450px;
     }
  }
 
  @media (max-width: 768px) { 
     .tausta{
-        height: 300px;
+        height: 350px;
+    }
+ }
+
+ @media (max-width: 575px) { 
+    .tausta{
+        height: 400px;
     }
  }
 
  @media (max-width: 490px) { 
     .tausta{
-        height: 350px;
-    }
- }
-
- @media (max-width: 386px) { 
-    .tausta{
-        height: 450px;
+        height: 400px;
     }
  }
 
  
+
+ @media (max-width: 435px) { 
+    .tausta{
+        height: 450px;
+    }
+ }
+ @media (max-width: 369px) { 
+    .tausta{
+        height: 600px;
+    }
+ }
+ @media (max-width: 301px) { 
+    .tausta{
+        height: 800px;
+    }
+ }
 
 .tausta{
     background-color: white;
@@ -39,7 +61,7 @@
     
        
 }
-p {
-    margin-top: 1rem;
-}
+
+
+
 
