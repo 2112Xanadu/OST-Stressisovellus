@@ -1,8 +1,10 @@
 'use strict';
+
+// Source: https://github.com/patrick-ausderau/wop
+
 const url = 'http://localhost:3000'; // change url when uploading to server
 
 // select existing html elements
-//const loginForm = document.querySelector('#login-form');
 const loginForm = document.getElementById('login-form');
 
 console.log('login form?', loginForm);
