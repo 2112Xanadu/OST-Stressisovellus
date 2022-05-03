@@ -112,7 +112,7 @@ const printGraph = (stress) => {
 
 // Function for displaying stress test result
 const printStress = (stress) => {
-  // Convert timestamp into a beautiful date
+  // Convert timestamp into a beautiful Finnish style date
   const testip = stress[stress.length - 1].dateAndTime;
   const ts = new Date(testip);
   const date1 = ts.getDate();
@@ -120,6 +120,7 @@ const printStress = (stress) => {
   const year1 = ts.getFullYear();
   const dateToDisplay1 = date1 + "." + (month1 + 1) + "." + year1;
 
+  // Insert html if data exists
   if (stress.length > 0) {
     const html = `<h3>Stressidata</h3>
                     <p>
