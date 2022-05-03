@@ -40,15 +40,15 @@ main {
   opacity: 0.8;
 }
 
-.btn-check:checked+.btn-primary:focus,
-.btn-check:active+.btn-primary:focus,
+.btn-check:checked + .btn-primary:focus,
+.btn-check:active + .btn-primary:focus,
 .btn-primary:active:focus,
 .btn-primary.active:focus,
-.show>.btn-primary.dropdown-toggle:focus {
+.show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0;
 }
 
-.btn-check:focus+.btn-outline-primary,
+.btn-check:focus + .btn-outline-primary,
 .btn-outline-primary:focus {
   box-shadow: 0;
 }
@@ -124,6 +124,25 @@ p {
   color: rgb(124, 199, 211);
   background-color: rgb(165, 200, 206);
   border-radius: 9px;
+}
+#checkStress h2 {
+  margin-top: 1.5rem;
+  font-weight: 700;
+}
+#checkStress p {
+  margin: 1.5rem 2rem 0 2rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+#etole {
+  text-align: center;
+  margin-top: 100px;
+}
+@media screen and (max-width: 1000px) {
+  #checkStress p {
+    margin: 1rem 1rem 1rem 1rem;
+  }
 }
 
 @media screen and (max-width: 800px) {

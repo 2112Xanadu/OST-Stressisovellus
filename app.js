@@ -8,6 +8,7 @@ const session = require("express-session");
 const userRoute = require("./routes/userRoute");
 const authRoute = require("./routes/authRoute");
 const kubiosRoute = require("./routes/kubiosRoute");
+const stressRoute = require("./routes/stressRoute");
 
 const passport = require("./utils/pass");
 const app = express();
