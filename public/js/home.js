@@ -17,8 +17,6 @@ const ul1 = document.getElementById("checkHrv");
 
 // This function prints measurement information from json file.
 const printKubios = (measurements) => {
-  console.log(measurements);
-
   if (measurements.length > 0) {
     const i = measurements.length - 1;
     const html = `<h2>HRV-data</h2>
@@ -41,10 +39,6 @@ const printKubios = (measurements) => {
     ul1.innerHTML = html;
   }
 };
-
-// Stress survey
-// select existing html elements
-//const ul2 = document.getElementById('stress survey info');
 
 // Ajax call for fetching Hrv measurement information
 const getKubios = async () => {

@@ -70,16 +70,26 @@ const printGraph = (stress) => {
     // Add series
     // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
     var series = chart.series.push(
-      am5xy.LineSeries.new(root, {
+      am5xy.ColumnSeries.new(root, {
         name: "result",
         xAxis: xAxis,
         yAxis: yAxis,
         valueYField: "value",
         valueXField: "date",
-        legendLabelText: "Plääh",
+        fill: am5.color(0x7cc7d3),
+        stroke: am5.color(0x0a1045),
         tooltip: am5.Tooltip.new(root, {
           labelText: "{valueY}",
         }),
+      })
+    );
+    chart.children.unshift(
+      am5.Label.new(root, {
+        text: "Aiemmat tulokset",
+        fontSize: 25,
+        fontWeight: "350",
+        x: am5.percent(50),
+        centerX: am5.percent(50),
       })
     );
 

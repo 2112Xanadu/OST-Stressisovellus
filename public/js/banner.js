@@ -4,8 +4,10 @@ const pvm = new Date();
 const date = pvm.getDate();
 const month = pvm.getMonth();
 const year = pvm.getFullYear();
+
+//Variable containing current date in a beautiful form
 const dateToDisplay = date + "." + (month + 1) + "." + year;
 
-//Display the date in correct format
+//Display the date
 document.getElementById("pvm1").innerHTML = dateToDisplay;
 document.getElementById("pvm2").innerHTML = dateToDisplay;
