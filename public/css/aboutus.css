@@ -45,6 +45,10 @@ h4 {
   letter-spacing: 0.5px;
 }
 
+#no-padding {
+  padding: 0;
+}
+
 p {
   font-size: 1rem;
   color: #0a1045;
