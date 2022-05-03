@@ -63,6 +63,17 @@ const printGraph = (measurements) => {
             })
         }));
 
+        chart.children.unshift(am5.Label.new(root, {
+            text: "Readiness arvosi",
+            fontSize: 24,
+            fontWeight: "500",
+            textAlign: "center",
+            x: am5.percent(50),
+            centerX: am5.percent(50),
+            paddingTop: -20,
+            paddingBottom: 30
+        }));
+
         // Add scrollbar
         // https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
         chart.set("scrollbarX", am5.Scrollbar.new(root, {
