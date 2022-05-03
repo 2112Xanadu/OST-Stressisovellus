@@ -1,24 +1,20 @@
 'use strict';
 
-// Code for fetching information to homepage
+// Code for fetching information to oma hrv-data webpage
 const url = 'http://localhost:3000'; // change url when uploading to server
 
 const printGraph = (measurements) => {
 
-
     am5.ready(function () {
-
         // Create root element
         // https://www.amcharts.com/docs/v5/getting-started/#Root_element
         var root = am5.Root.new("chartdiv");
-
 
         // Set themes
         // https://www.amcharts.com/docs/v5/concepts/themes/
         root.setThemes([
             am5themes_Animated.new(root)
         ]);
-
 
         // Create chart
         // https://www.amcharts.com/docs/v5/charts/xy-chart/
@@ -29,7 +25,6 @@ const printGraph = (measurements) => {
             wheelY: "zoomX",
             pinchZoomX: true
         }));
-
 
         // Add cursor
         // https://www.amcharts.com/docs/v5/charts/xy-chart/cursor/
@@ -55,7 +50,6 @@ const printGraph = (measurements) => {
             renderer: am5xy.AxisRendererY.new(root, {})
         }));
 
-
         // Add series
         // https://www.amcharts.com/docs/v5/charts/xy-chart/series/
         var series = chart.series.push(am5xy.LineSeries.new(root, {
@@ -69,14 +63,12 @@ const printGraph = (measurements) => {
             })
         }));
 
-
         // Add scrollbar
         // https://www.amcharts.com/docs/v5/charts/xy-chart/scrollbars/
         chart.set("scrollbarX", am5.Scrollbar.new(root, {
             orientation: "horizontal",
             height: 10
         }));
-
 
         // Set data readiness measurements
         /* var data = generateDatas(15);
@@ -105,6 +97,7 @@ const printGraph = (measurements) => {
 // select existing html elements
 const ul1 = document.getElementById('checkHrv');
 
+// Source: https://github.com/ilkkamtk/wop-ui
 // This function prints measurement information from json file.
 const printKubios = (measurements) => {
 

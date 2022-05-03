@@ -1,5 +1,6 @@
 "use strict";
 
+// Source: https://github.com/ilkkamtk/wop-ui
 // Code for fetching information to homepage
 const url = "http://localhost:3000"; // change url when uploading to server
 
