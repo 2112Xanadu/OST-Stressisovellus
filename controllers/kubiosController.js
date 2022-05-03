@@ -11,7 +11,7 @@ const kubios_fetch = async () => {
     const kubios = await kubiosModel.kubiosFetch();
     console.log("AreEEEEEEEE we in kubios_fetch function?");
     console.log("kubios controller get user information", kubios);
-    //res.json(diaries);
+    //res.json(kubios);
 };
 
 const kubios_fetch_measurement = async (req, res) => {

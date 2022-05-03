@@ -5,7 +5,6 @@
 // to right path
 
 // Creating variables for node modules and route.
-
 const express = require("express");
 const kubiosRoute = express.Router();
 const kubiosController = require("../controllers/kubiosController");
@@ -23,4 +22,5 @@ kubiosRoute.route("/")
     //.get(kubiosController.kubios_fetch)
     .get(kubiosController.kubios_fetch_measurement);
 
+// Export router
 module.exports = kubiosRoute;

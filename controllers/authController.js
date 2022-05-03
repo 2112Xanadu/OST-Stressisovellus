@@ -1,5 +1,8 @@
 "use strict";
 
+// Based on course material (source: https://github.com/patrick-ausderau/wop)
+// Auth controller
+
 require("dotenv").config();
 const jwt = require("jsonwebtoken");
 const passport = require("passport");
@@ -7,6 +10,7 @@ const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 const userModel = require("../models/userModel");
 
+// User login with password authentication
 const login = (req, res) => {
     console.log("line 11: login", req.body);
     // TODO: add passport authenticate

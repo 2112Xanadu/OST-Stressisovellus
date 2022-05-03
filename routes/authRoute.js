@@ -1,6 +1,6 @@
 'use strict';
 
-
+// Based on course material (source: https://github.com/patrick-ausderau/wop)
 // Creating variables for node modules and route.
 
 const express = require('express');
@@ -8,7 +8,10 @@ const { body, sanitizeBody } = require('express-validator');
 const router = express.Router();
 const { login, user_post, logout } = require('../controllers/authController.js');
 
+// Login route
 router.post('/login', login);
+
+// Register route
 router.post('/register',
     [
         body('firstname').isLength({ min: 3 }),
@@ -21,6 +24,9 @@ router.post('/register',
     ],
     user_post
 );
+
+// Log out route
 router.get('/logout', logout);
 
+// Export router
 module.exports = router;
