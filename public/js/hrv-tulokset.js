@@ -71,7 +71,7 @@ const printGraph = (measurements) => {
             x: am5.percent(50),
             centerX: am5.percent(50),
             paddingTop: -18,
-            paddingBottom: 30
+            paddingBottom: 0
         }));
 
         // Add scrollbar
