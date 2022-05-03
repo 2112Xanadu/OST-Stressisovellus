@@ -64,7 +64,7 @@ tallenna.onclick = () => {
 };
 
 //Check if the test has been done already.
-//In a better world with more hours in a day, the date would come from the database.
+//In a better world with more time, the date would come from the database.
 if (testDate == dateToDisplay) {
   resultText.style.display = "none";
   result.innerText = "Olet tänään jo täyttänyt kyselyn.";
