@@ -5,11 +5,6 @@ const url = "http://localhost:3000"; // change url when uploading to server
 const user = sessionStorage.getItem("user");
 const userid = JSON.parse(user).userid;
 const token = sessionStorage.getItem("token");
-const pvm = new Date();
-const date = pvm.getDate();
-const month = pvm.getMonth();
-const year = pvm.getFullYear();
-const dateToDisplay = date + "." + (month + 1) + "." + year;
 
 // Select element to display stress test result
 const dailyStress = document.getElementById("ressi");
@@ -100,9 +95,6 @@ const printGraph = (stress) => {
     stress.forEach((element) => {
       if (element.result) {
         const timestamp = Date.parse(element.dateAndTime);
-        console.log(element.dateAndTime);
-
-        console.log("test" + element.result);
         data.push({
           date: timestamp,
           value: element.result,
@@ -120,13 +112,18 @@ const printGraph = (stress) => {
 
 // Function for displaying stress test result
 const printStress = (stress) => {
-  console.log("Toimiiko: " + stress.comment);
+  // Convert timestamp into a beautiful date
+  const testip = stress[stress.length - 1].dateAndTime;
+  const ts = new Date(testip);
+  const date1 = ts.getDate();
+  const month1 = ts.getMonth();
+  const year1 = ts.getFullYear();
+  const dateToDisplay1 = date1 + "." + (month1 + 1) + "." + year1;
+
   if (stress.length > 0) {
     const html = `<h3>Stressidata</h3>
                     <p>
-                    <b>Päivämäärä: </b> ${stress[
-                      stress.length - 1
-                    ].dateAndTime.substr(0, 10)}<br>
+                    <b>Päivämäärä: </b> ${dateToDisplay1}<br>
                     <b>Stressitasotestin tulos:</b> ${
                       stress[stress.length - 1].result
                     }<br>
@@ -148,7 +145,6 @@ const getResult = async () => {
     };
     const response = await fetch(url + "/stress/:userid", fetchOptions);
     const stress = await response.json();
-    console.log(stress[0].dateAndTime.substr(0, 10));
     printStress(stress);
     printGraph(stress);
   } catch (e) {
