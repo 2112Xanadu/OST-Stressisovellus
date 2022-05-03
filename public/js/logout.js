@@ -9,7 +9,7 @@ const url = 'http://localhost:3000'; // change url when uploading to server
     // remove token
     sessionStorage.removeItem('token');
     sessionStorage.removeItem('user');
-    alert('You have logged out');
+    alert('Olet ulos kirjautuneena');
     location.href = 'index.html';
   } catch (e) {
     console.log(e.message);
