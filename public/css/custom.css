@@ -1,15 +1,13 @@
 :root {
-  --bs-primary: #c7ebf0;
-  --bs-secondary: #5d7e83;
+  --bs-primary: rgb(199, 235, 240);
+  --bs-background: rgb(218, 255, 253);
 
   --bs-body-font-family: "Nunito Sans", sans-serif;
-  /* "Raleway", sans-serif; */
-  --bs-body-secondary-font-family: "Raleway", sans-serif;
 }
 
 body,
 html {
-  background-color: rgb(218, 255, 253);
+  background-color: var(--bs-background);
 }
 
 .flexi {
@@ -25,7 +23,7 @@ main {
 }
 
 .btn-primary {
-  color: #fff;
+  color: rgb(255, 255, 255);
   background-color: var(--bs-primary);
   border-color: var(--bs-primary);
   text-align: center;
@@ -36,9 +34,9 @@ main {
 }
 
 .btn-primary:hover {
-  color: #fff;
-  background-color: #a5c5c9;
-  border-color: #a5c5c9;
+  color: rgb(255, 255, 255);
+  background-color: rgb(165, 197, 201);
+  border-color: rgb(165, 197, 201);
   opacity: 0.8;
 }
 
@@ -63,7 +61,7 @@ main {
 
 .teksti1 {
   font-size: 17px;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   padding: 50px 12px;
   font-family: var(--bs-body-font-family);
   text-align: center;
@@ -84,7 +82,7 @@ main {
 .h2,
 h2 {
   font-size: 26px;
-  color: #0A1045;
+  color: rgb(10, 16, 69);
   letter-spacing: 0.5px;
 }
 
@@ -96,12 +94,12 @@ h2 {
 .h4,
 h4 {
   font-size: 26px;
-  color: #0A1045;
+  color: rgb(10, 16, 69);
   letter-spacing: 0.5px;
 }
 
 p {
-  color: #0A1045;
+  color: rgb(10, 16, 69);
   letter-spacing: 0.5px;
   margin-top: 4rem;
   font-weight: 500;
@@ -112,8 +110,8 @@ p {
 }
 
 .btn-light {
-  color: #0A1045;
-  background-color: #c7ebf0;
+  color: rgb(10, 16, 69);
+  background-color: rgb(199, 235, 240);
   border-radius: 9px;
   border: none;
   margin: 0.5rem 0.9rem;
@@ -123,8 +121,8 @@ p {
 }
 
 .btn-light:hover {
-  color: #7cc7d3;
-  background-color: #a5c8ce;
+  color: rgb(124, 199, 211);
+  background-color: rgb(165, 200, 206);
   border-radius: 9px;
 }
 
