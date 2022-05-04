@@ -23,6 +23,7 @@
 
 <body>
   <div class="flexi">
+    <!-- source: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox -->
     <nav class="navbar">
       <header class="logo">
         <img id="cheese" src="img/cheese.png" alt="picture of cheese" />OST
@@ -49,8 +50,10 @@
     <div class="container-fluid" style="background-color: #c7ebf0; height: 9rem">
       <div class="row h-100">
         <div class="col-6 col-md-6 align-self-end">
+          <!-- Displays user's firstname -->
           <h2 class="ms-3">Hei, <span id="display_name"></span>!</h2>
 
+          <!-- Displays current date -->
           <h4 id="pvm1" class="text-start d-block d-sm-none ms-3">
             Päivämäärä
           </h4>
@@ -62,11 +65,13 @@
     </div>
 
     <main>
-      <!-- boxes-->
+      <!-- Boxes -->
       <div class="container overflow-hidden">
+        <!-- source: https://css-tricks.com/snippets/css/a-guide-to-flexbox/ -->
+        <!-- source: https://www.w3schools.com/Css/css3_mediaqueries_ex.asp -->
         <div class="row laatikot gx-0 gy-4">
-          <!-- gx-5 gy-4-->
           <div class="laatikko1 col-md-4">
+            <!-- Gets Hrv measurement data from home.js using ajax -->
             <div id="checkHrv" class="teksti1 border shadow p-3 mb-5 bg-white text-align: center;">
               <p>
                 Et ole tänään tehnyt HRV-mittausta.<br />Tee Readiness-mittaus
@@ -106,6 +111,7 @@
       </div>
     </main>
 
+    <!-- Footer -->
     <footer>
       <div class="footer-content">
         <ul>

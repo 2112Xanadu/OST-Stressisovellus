@@ -4,6 +4,7 @@
 // Code for fetching information to homepage
 const url = "http://localhost:3000"; // change url when uploading to server
 
+// Source: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 // Displaying user's firstname
 // select existing html elements
 const h2 = document.getElementById("display_name");
