@@ -1,12 +1,11 @@
 :root {
   --bs-blue: rgb(100, 179, 210);
-  --bs-nav-links: rgb(75, 101, 105);
-  --bs-nav-links-active: rgb(29, 124, 137);
+  --bs-nav-links: rgb(10, 16, 69);
+  --bs-nav-links-active: rgb(9, 85, 114);
   --bs-nav-links-hover: rgb(56, 75, 78);
   --ns-toggle-button: rgb(93, 126, 131);
-  --bs-nav-font-family: "Raleway",
-  sans-serif;
-  --bs-logo: rgb(75, 101, 105);
+  --bs-nav-font-family: "Raleway", sans-serif;
+  --bs-logo: rgb(10, 16, 69);
 }
 
 .navbar {

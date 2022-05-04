@@ -1,9 +1,8 @@
 :root {
   --bs-blue: rgb(100, 179, 210);
-  --bs-footer-links: rgb(75, 101, 105);
+  --bs-footer-links: rgb(10, 16, 69);
   --bs-footer-links-hover: rgb(46, 62, 65);
-  --bs-body-font-family: "Nunito Sans",
-  sans-serif;
+  --bs-body-font-family: "Nunito Sans", sans-serif;
 }
 
 .footer-content {
@@ -39,7 +38,7 @@
 }
 
 .copyright {
-  color: rgb(46, 65, 67);
+  color: rgb(10, 16, 69);
   margin-top: 15px;
   text-align: center;
   font-size: 14px;
