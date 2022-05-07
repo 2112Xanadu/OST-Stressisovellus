@@ -104,6 +104,17 @@ p {
   margin-top: 5rem;
 }
 
+#chart-box {
+  background-color: #fff;
+  border-radius: 30px;
+}
+
+#chartdiv {
+  height: 30rem;
+  max-width: 100%;
+  background-color: #fff;
+}
+
 .btn-light {
   color: #0a1045;
   background-color: #c7ebf0;
