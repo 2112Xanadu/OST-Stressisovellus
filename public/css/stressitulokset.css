@@ -17,6 +17,9 @@ label {
   width: 50%;
   resize: none;
 }
+#score-explanation {
+  margin: 3rem 0 3rem 0;
+}
 @media (max-width: 600px) {
   #laatikkoinen {
     width: 90%;
@@ -121,7 +124,7 @@ p {
 }
 
 .btn-light:hover {
-  color: #7cc7d3;
+  color: #0a1045;
   background-color: #a5c8ce;
   border-radius: 9px;
 }

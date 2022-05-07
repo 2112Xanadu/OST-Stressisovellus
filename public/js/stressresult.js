@@ -5,6 +5,7 @@ const result = document.getElementById("result");
 const resultText = document.getElementById("resultText");
 const laatikkoinen = document.getElementById("laatikkoinen");
 const formi = document.getElementById("formi");
+const scoreExplanation = document.getElementById("score-explanation");
 const tallenna = document.getElementById("tallenna");
 const mostRecentScore = sessionStorage.getItem("mostRecentScore");
 const testDate = localStorage.getItem("testDate");
@@ -16,13 +17,13 @@ const url = "http://localhost:3000";
 
 //Display emoji, score and comment
 result.innerText = `Pisteet: ${mostRecentScore}/10`;
-if (mostRecentScore <= 2) {
+if (mostRecentScore <= 3) {
   emoji.innerText = "😙";
   resultText.innerText = `Jatka samaan malliin! Mikäli kuitenkin koet stressitasosi nousevan, käynnistä stressin syiden etsiminen ja poistaminen sekä turvaa riittävä lepo ja palautuminen. Muista, että tämä testi on vain viitteellinen ja suuntaa antava.`;
-} else if (mostRecentScore <= 4) {
-  emoji.innerText = "😔";
-  resultText.innerText = `Laita asiat tärkeysjärjestykseen, kaikkea et voi tehdä kerralla. Käynnistä stressin syiden etsiminen ja poistaminen sekä turvaa riittävä lepo ja palautuminen, sillä muutoin riskinä on se, että elimistö ei täysin palaudu normaalitilaan. Hyödynnä erilaisia rentoutumiskeinoja. Mikäli kuitenkin koet, että voimavarasi loppuvat hakeudu ammattiauttajan vastaanotolle. Muista, että tämä testi on vain viitteellinen ja suuntaa antava.`;
-} else if (mostRecentScore > 4) {
+} else if (mostRecentScore <= 6) {
+  emoji.innerText = "😬";
+  resultText.innerText = `Laita asiat tärkeysjärjestykseen, kaikkea et voi tehdä kerralla. Käynnistä stressin syiden etsiminen ja poistaminen sekä turvaa riittävä lepo ja palautuminen, sillä muutoin riskinä on se, että elimistö ei täysin palaudu normaalitilaan. Hyödynnä erilaisia rentoutumiskeinoja. Mikäli kuitenkin koet, että voimavarasi loppuvat, hakeudu ammattiauttajan vastaanotolle. Muista, että tämä testi on vain viitteellinen ja suuntaa antava.`;
+} else if (mostRecentScore > 6) {
   emoji.innerText = "🤯";
   resultText.innerText = `Hakeudu ammattiauttajan vastaanotolle. Tilanne vaatii elämän kokonaisvaltaista uudelleen arviointia. Muista, että tämä testi on vain viitteellinen ja suuntaa antava.`;
 }
@@ -57,6 +58,7 @@ tallenna.onclick = () => {
   resultText.style.display = "none";
   result.innerText = "Kiitos vastauksesta!";
   emoji.style.display = "none";
+  scoreExplanation.style.display = "none";
   formi.style.display = "none";
   tallenna.style.display = "none";
   etusivulle.style.display = "block";
@@ -69,6 +71,7 @@ if (testDate == dateToDisplay) {
   resultText.style.display = "none";
   result.innerText = "Olet tänään jo täyttänyt kyselyn.";
   emoji.style.display = "none";
+  scoreExplanation.style.display = "none";
   formi.style.display = "none";
   tallenna.style.display = "none";
   etusivulle.style.display = "block";

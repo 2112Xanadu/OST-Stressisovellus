@@ -122,12 +122,10 @@ const printStress = (stress) => {
 
   // Insert html if data exists
   if (stress.length > 0) {
-    const html = `<h3>Stressidata</h3>
+    const html = `<h4><b>Viimeisin stressitasotesti</b></h4>
                     <p>
                     <b>Päivämäärä: </b> ${dateToDisplay1}<br>
-                    <b>Stressitasotestin tulos:</b> ${
-                      stress[stress.length - 1].result
-                    }<br>
+                    <b>Stressitulos:</b> ${stress[stress.length - 1].result}<br>
                     <b>Omat muistiinpanot:</b> <br>${
                       stress[stress.length - 1].comment
                     }</p>`;
