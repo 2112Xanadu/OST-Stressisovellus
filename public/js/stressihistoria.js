@@ -1,6 +1,6 @@
 "use strict";
 
-// Code for fetching information to homepage
+// Code for fetching information to stressihistoria page
 const url = "http://localhost:3000"; // change url when uploading to server
 const user = sessionStorage.getItem("user");
 const userid = JSON.parse(user).userid;
@@ -126,9 +126,8 @@ const printStress = (stress) => {
                     <p>
                     <b>Päivämäärä: </b> ${dateToDisplay1}<br>
                     <b>Stressitulos:</b> ${stress[stress.length - 1].result}<br>
-                    <b>Omat muistiinpanot:</b> <br>${
-                      stress[stress.length - 1].comment
-                    }</p>`;
+                    <b>Omat muistiinpanot:</b> <br>${stress[stress.length - 1].comment
+      }</p>`;
     dailyStress.innerHTML = html;
   }
 };

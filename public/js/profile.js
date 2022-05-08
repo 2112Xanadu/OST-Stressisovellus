@@ -1,7 +1,7 @@
 'use strict';
 
 // Fetching information to profile page
-const url = 'http://localhost:3000'; // change url when uploading to server
+const url = 'http://localhost:3000';
 
 // Displaying user's fullname
 // select existing html elements
@@ -10,6 +10,7 @@ const h2Last = document.getElementById('lastname');
 const user = JSON.parse(sessionStorage.getItem('user'));
 console.log(user);
 
+// Displaying user information
 h2First.innerHTML = user.firstname;
 h2Last.innerHTML = user.lastname;
 

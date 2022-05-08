@@ -1,13 +1,16 @@
 (async () => {
   'use strict';
-  const url = 'http://localhost:3000'; // change url when uploading to server
 
-  // check sessionStorage
+  // Source: https://github.com/patrick-ausderau/wop
+  // Code for checking if user is logged in
+  const url = 'http://localhost:3000';
+
+  // Checks sessionStorage
   if (!sessionStorage.getItem('token') || !sessionStorage.getItem('user')) {
     location.href = 'index.html';
     return;
   }
-  // check if token valid
+  // Checks if token is valid
   try {
     const fetchOptions = {
       headers: {

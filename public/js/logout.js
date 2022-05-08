@@ -1,5 +1,7 @@
 'use strict';
-const url = 'http://localhost:3000'; // change url when uploading to server
+// Source: https://github.com/patrick-ausderau/wop
+// Code for logging out
+const url = 'http://localhost:3000';
 
 (async () => {
   try {

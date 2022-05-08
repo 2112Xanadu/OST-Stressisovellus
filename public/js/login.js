@@ -1,15 +1,15 @@
 'use strict';
 
-// Source: https://github.com/patrick-ausderau/wop
+// source: https://github.com/patrick-ausderau/wop
 
-const url = 'http://localhost:3000'; // change url when uploading to server
+const url = 'http://localhost:3000';
 
-// select existing html elements
+// Select existing html elements
 const loginForm = document.getElementById('login-form');
 
 console.log('login form?', loginForm);
 
-// login
+// Login
 loginForm.addEventListener('submit', async (evt) => {
     evt.preventDefault();
     const data = serializeJson(loginForm);
@@ -27,7 +27,7 @@ loginForm.addEventListener('submit', async (evt) => {
     if (!json.user) {
         alert(json.message);
     } else {
-        // save token
+        // Saves token
         sessionStorage.setItem('token', json.token);
         sessionStorage.setItem('user', JSON.stringify(json.user));
         alert('Sisäänkirjautuminen onnistui');

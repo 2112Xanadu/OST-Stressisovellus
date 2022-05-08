@@ -1,3 +1,5 @@
+/* Styles for homepage and Oma HRV-data page */
+
 :root {
   --bs-blue: rgb(100, 179, 210);
   --bs-primary: rgb(199, 235, 240);
@@ -82,12 +84,12 @@ main {
 
 .h2,
 h2 {
-  font-size: 26px;
   color: rgb(10, 16, 69);
   letter-spacing: 0.5px;
 }
 
 #checkHrv h2 {
+  font-size: 26px;
   margin-top: 1.5rem;
   font-weight: 700;
 }
@@ -137,6 +139,7 @@ p {
   border-radius: 9px;
 }
 #checkStress h2 {
+  font-size: 26px;
   margin-top: 1.5rem;
   font-weight: 700;
 }

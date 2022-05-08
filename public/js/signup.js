@@ -1,10 +1,11 @@
 'use strict';
-const url = 'http://localhost:3000'; // change url when uploading to server
+// Source: https://github.com/patrick-ausderau/wop
+const url = 'http://localhost:3000';
 
 // select existing html elements
 const signUpForm = document.getElementById('register-form');
 
-// submit add user form
+// Submitting register form
 signUpForm.addEventListener('submit', async (evt) => {
     evt.preventDefault();
     const data = serializeJson(signUpForm);

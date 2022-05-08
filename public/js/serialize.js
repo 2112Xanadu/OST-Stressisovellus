@@ -31,6 +31,9 @@
 // Production steps of ECMA-262, Edition 5, 15.4.4.21
 // Reference: http://es5.github.io/#x15.4.4.21
 // https://tc39.github.io/ecma262/#sec-array.prototype.reduce
+
+// Source: https://github.com/patrick-ausderau/wop
+
 if (!Array.prototype.reduce) {
   Object.defineProperty(Array.prototype, 'reduce', {
     value: function (callback /*, initialValue*/) {

@@ -142,4 +142,8 @@ p {
     .mb-2 {
         margin-bottom: 0.6rem !important;
     }
+
+    .footer-content {
+        margin-top: 3rem !important;
+    } 
 }
